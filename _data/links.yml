@@ -4,8 +4,11 @@
 - url: /about
   title: About
   
+- url: /apps
+  title: Supported Apps
+  
 - url: /contribute
   title: Contribute
   
-- url: https://github.com/open-keychain/open-keychain/wiki/OpenPGP-API
-  title: For app developers
+- url: /api
+  title: For App Developers
