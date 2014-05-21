@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-# Description
+<img style="float: right" src="{{ site.url }}/images/screen1.png" />
 
 OpenKeychain allows you to manage cryptographic keys and encrypt messages as well as files for your contacts. It enables a secure end-to-end communication in times of mass surveillance.
 
