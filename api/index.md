@@ -1,11 +1,13 @@
 ---
 layout: page
-title: Supported Apps
+title: For App Developers
 ---
 
-| App            | Description   | Install |
-|:-------------- |:------------- | -------:|
-| K-9 Mail       | K-9 Mail: OpenKeychain support available in current [alpha build](https://github.com/k9mail/k-9/releases/tag/4.904)! | no release |
-| Conversations  | Jabber/XMPP client with OpenPGP support | [Play](https://play.google.com/store/apps/details?id=eu.siacs.conversations), [F-Droid](https://f-droid.org/app/eu.siacs.conversations) |
-| PGPAuth        | App to send a PGP-signed request to a server to open or close something, e.g. a door | [Play](https://play.google.com/store/apps/details?id=org.lf_net.pgpunlocker), [F-Droid](https://f-droid.org/app/org.lf_net.pgpunlocker) |
 
+OpenKeychain provides two APIs, namely the Intent API and the Remote OpenPGP API. The Intent API can be used without permissions to start OpenKeychain's activities for cryptographic operations, import of keys, etc. However, it always requires user input, so that no malicious application can use this API without user intervention.
+The Remote OpenPGP API is more sophisticated and allows to to operations without user interaction in the background. When utilizing this API, OpenKeychain asks the user on first use to grant access for the calling client application.
+
+More technical information and examples about these APIs can be found in the project's wiki:
+
+  * [Intent API](https://github.com/open-keychain/open-keychain/wiki/Intent-API)
+  * [Remote OpenPGP API](https://github.com/open-keychain/open-keychain/wiki/OpenPGP-API)
