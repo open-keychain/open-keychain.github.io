@@ -2,7 +2,7 @@ markdown: redcarpet
 highlighter: null
 permalink: /:title
 
-url: http://open-keychain.github.io/
+url: http://open-keychain.github.io
 baseurl: 
 
 redcarpet:
