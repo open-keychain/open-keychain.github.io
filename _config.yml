@@ -2,8 +2,8 @@ markdown: redcarpet
 highlighter: null
 permalink: /:title
 
-url:
-baseurl:
+url: http://open-keychain.github.io
+baseurl: /
 
 redcarpet:
   extensions: [strikethrough, tables]
