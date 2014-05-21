@@ -2,7 +2,7 @@ markdown: redcarpet
 highlighter: null
 permalink: /:title
 
-url: http://openkeychain.org
+url: http://www.openkeychain.org
 baseurl: 
 
 redcarpet:
