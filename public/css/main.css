@@ -445,6 +445,11 @@ footer {
   .avocado a:hover {
     color: #141e01; }
 
+.ok a {
+  color: #aa66cc; }
+  .ok a:hover {
+    color: #773399; }
+
 /*----------------------------------------------------------------------------*/
 .highlight {
   padding: 30px;
