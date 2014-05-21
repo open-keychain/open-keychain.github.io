@@ -3,3 +3,12 @@
 
 - url: /about
   title: About
+  
+- url: https://github.com/open-keychain/open-keychain/issues
+  title: Issues?
+  
+- url: https://github.com/open-keychain/open-keychain/wiki/OpenPGP-API
+  title: For app developers
+  
+- url: https://github.com/open-keychain/open-keychain/
+  title: Contribute

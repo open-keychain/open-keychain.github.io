@@ -3,6 +3,21 @@ layout: default
 title: Home
 ---
 
+<div id="container" style="width:500px">
+
+<div id="menu" style="height:200px;width:100px;float:left;">
+OpenKeychain for Android allows you to manage cryptographic keys and encrypt messages as well as files for your contacts. It enables a secure end-to-end communication in times of mass surveillance.
+</div>
+
+<div id="content" style="height:200px;width:400px;float:left;">
+<a href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain" title="Get it from Google Play!"
+             style="background-image: url({{site.baseurl}}/public/images/google_play.png);"></a>
+<a href="https://f-droid.org/app/org.sufficientlysecure.keychain" title="Get it from F-Droid!"
+             style="background-image: url({{site.baseurl}}/public/images/fdroid.png);"></a>
+</div>
+
+</div>
+
 <section class="archive">
 {% for post in site.posts %}
 {% unless post.next %}
