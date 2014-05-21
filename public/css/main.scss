@@ -8,6 +8,7 @@ $azul-accent-color: #0070bb;
 $ruby-accent-color: #e0115f;
 $amber-accent-color: #ff7e00;
 $avocado-accent-color: #568203;
+$ok-accent-color: #aa66cc
 
 /*============================================================================*/
 * {
@@ -122,6 +123,10 @@ footer {
 
 .avocado { a { color: $avocado-accent-color;
     &:hover { color: darken($avocado-accent-color, 20%);
+}}}
+
+.ok { a { color: $ok-accent-color;
+    &:hover { color: darken($ok-accent-color, 20%);
 }}}
 
 /*----------------------------------------------------------------------------*/
