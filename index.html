@@ -3,6 +3,7 @@ layout: default
 title: Home
 ---
 
+<section class="archive">
 <div id="container" style="width:500px">
 
 <div id="menu" style="height:200px;width:100px;float:left;">
@@ -10,13 +11,17 @@ OpenKeychain for Android allows you to manage cryptographic keys and encrypt mes
 </div>
 
 <div id="content" style="height:200px;width:400px;float:left;">
-<a href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain" title="Get it from Google Play!"
-             style="background-image: url({{site.baseurl}}/public/images/google_play.png);"></a>
-<a href="https://f-droid.org/app/org.sufficientlysecure.keychain" title="Get it from F-Droid!"
-             style="background-image: url({{site.baseurl}}/public/images/fdroid.png);"></a>
+<a href="https://f-droid.org/app/org.sufficientlysecure.keychain">
+<img src="{{site.baseurl}}/public/images/fdroid.png" width="129" height="45" />
+</a>
+<a href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain">
+<img src="{{site.baseurl}}/public/images/google_play.png" width="129" height="45" />
+</a>
 </div>
 
 </div>
+<div style="clear:both;"></div>
+</section>
 
 <section class="archive">
 {% for post in site.posts %}
