@@ -3,7 +3,7 @@ highlighter: null
 permalink: /:title
 
 url: http://open-keychain.github.io
-baseurl: /
+baseurl: 
 
 redcarpet:
   extensions: [strikethrough, tables]
