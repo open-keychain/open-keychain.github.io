@@ -26,8 +26,9 @@ We also have a [small guide in our README how to start hacking](https://github.c
 
 # Translations
 
-Help translating OpenKeychain! Everybody can participate at [OpenKeychain on Transifex](http://www.transifex.com/projects/p/open-keychain/).
+Help translating OpenKeychain! Everybody can participate at [OpenKeychain on Transifex](http://www.transifex.com/projects/p/open-keychain/).  
+We collect some helpful information regarding the language and usage of Transifex [in our Wiki](https://github.com/open-keychain/open-keychain/wiki/Language-Conventions).
 
 <a target="_blank" style="text-decoration:none; color:black; font-size:66%" href="https://www.transifex.com/projects/p/open-keychain/resource/strings/" 
 title="See more information on Transifex.com">Top translations: open-keychain » strings</a><br/>
-<img border="0" src="https://www.transifex.com/projects/p/open-keychain/resource/strings/chart/image_png"/><br/><a target="_blank" href="https://www.transifex.com/"><img border="0" src="https://ds0k0en9abmn1.cloudfront.net/static/charts/images/tx-logo-micro.646b0065fce6.png"/></a>
+<img border="0" src="https://www.transifex.com/projects/p/open-keychain/resource/strings/chart/image_png"/>
