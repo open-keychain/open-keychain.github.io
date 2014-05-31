@@ -32,3 +32,7 @@ We collect some helpful information regarding the language and usage of Transife
 <a target="_blank" style="text-decoration:none; color:black; font-size:66%" href="https://www.transifex.com/projects/p/open-keychain/resource/strings/" 
 title="See more information on Transifex.com">Top translations: open-keychain » strings</a><br/>
 <img border="0" src="https://www.transifex.com/projects/p/open-keychain/resource/strings/chart/image_png"/>
+
+# Website
+
+This website is also hosted as a git repository, so if you find spelling/grammer mistakes or want to add more content, you are very welcome to do so by submitting a pull request for the [open-keychain.github.io repository](https://github.com/open-keychain/open-keychain.github.io).
