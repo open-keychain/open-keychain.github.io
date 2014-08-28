@@ -23,8 +23,8 @@ This release wouldn't be possible without the work of Vincent Breitmoser (GSoC 2
 
 [F-Droid](https://f-droid.org/app/org.sufficientlysecure.keychain)
 
-| A simple | table |
-| with multiple | lines|
+ | A simple      | table |
+ | with multiple | lines |
 
 <iframe width="200" height="315" src="//www.youtube.com/embed/NzJBA1t_dt8?rel=0" frameborder="0" allowfullscreen></iframe>
 <iframe width="200" height="315" src="//www.youtube.com/embed/DDf8fELUeHE?rel=0" frameborder="0" allowfullscreen></iframe>
