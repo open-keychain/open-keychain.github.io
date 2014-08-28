@@ -5,8 +5,13 @@ title: OpenKeychain 2.8
 
 A new stable version of OpenKeychain has been released!
 
-| OpenKeychain now has a awesome new first time wizard guiding users through the generation of new keys.  | <iframe width="560" height="315" src="//www.youtube.com/embed/NzJBA1t_dt8?rel=0" frameborder="0" allowfullscreen></iframe> |
 
+<div>
+  <div style="width:49&#37;; float:left;">OpenKeychain now has a awesome new first time wizard guiding users through the generation of new keys.</div>
+  <div style="width:50%;"><iframe width="200" height="315" src="//www.youtube.com/embed/NzJBA1t_dt8?rel=0" frameborder="0" allowfullscreen></iframe></div>
+</div>
+
+<iframe width="200" height="315" src="//www.youtube.com/embed/DDf8fELUeHE?rel=0" frameborder="0" allowfullscreen></iframe>
 
 [Google Play](https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain)
 
