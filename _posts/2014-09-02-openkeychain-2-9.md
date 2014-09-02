@@ -22,7 +22,7 @@ You can edit your existing key and add ECDH and ECDSA subkeys to your key. Curre
 ## Yubikey NEO support
 Currently, only signature generation is supported, support for decryption will follow soon. To test this feature follow these steps:
 
-  1. [Buy a Yubikey NEO](http://www.yubico.com/support/resellers/) and [prepare it for usage with OpenPGP using GnuPG and Yubico's tools](http://www.yubico.com/2012/12/yubikey-neo-openpgp/).
+  1. [Buy a Yubikey NEO](http://www.yubico.com/support/resellers/) and [prepare it for usage with OpenPGP using GnuPG and Yubico's tools](http://www.yubico.com/2012/12/yubikey-neo-openpgp/). Please do not change the PIN codes, currently we have these hardcoded to the default values.
   2. Export the keypair from GnuPG and transfer it to your Android device.
   3. In OpenKeychain import the keypair, it will be automatically detect that this is a keypair that works with a Yubikey only.
   
