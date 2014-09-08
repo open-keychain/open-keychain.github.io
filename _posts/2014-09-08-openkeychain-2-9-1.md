@@ -13,7 +13,7 @@ As promised, we are now releasing as early and often as possible™.
   * Yubikey: preference to allow other PINs, currently only signing via the OpenPGP API works, not inside of OpenKeychain
   * Fix usage of stripped keys
   * SHA256 as default for compatibility
-  * Intent API has changed, see https://github.com/open-keychain/open-keychain/wiki/Intent-API
+  * Intent API has changed, see [https://github.com/open-keychain/open-keychain/wiki/Intent-API](https://github.com/open-keychain/open-keychain/wiki/Intent-API)
   * OpenPGP API now handles revoked/expired keys and returns all user ids
 
 [Google Play](https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain) | [F-Droid](https://f-droid.org/app/org.sufficientlysecure.keychain)
