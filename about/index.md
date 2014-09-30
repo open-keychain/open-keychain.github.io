@@ -10,6 +10,7 @@ OpenKeychain helps you communicate more privately and securely. It uses high-qua
 Modern encryption is based on digital “keys”. OpenKeychain stores and manages your keys, and those of the people you communicate with, on your Android. It also helps you find others’ keys online, and interchange keys by touching devices. But its most frequent use is in using those keys to encrypt and decrypt messages.
 
 OpenKeychain integrates with
+
   * K-9 Mail
   * Conversations
   * and many more…
