@@ -11,3 +11,11 @@ More technical information and examples about these APIs can be found in the pro
 
   * [Intent API](https://github.com/open-keychain/open-keychain/wiki/Intent-API)
   * [Remote OpenPGP API](https://github.com/open-keychain/open-keychain/wiki/OpenPGP-API)
+
+
+### Expert Features
+
+  * OpenKeychain is Free Software (GPLv3+), thus you can verify that it does not contain any backdoors by inspecting the code and building it yourself.
+  * We try to design our build system as [deterministically as possible and avoid pre-compiled dependencies from other sources](https://github.com/open-keychain/open-keychain#gradle-build-system).
+  * Intent-based API, which always requires user interaction before anything is done. No automatic returns of decrypted content or similar security failures
+  * Easy [remote service API](https://github.com/open-keychain/open-keychain/wiki/OpenPGP-API) allowing operations without user interaction. Users can grant/revert access on an application basis.
