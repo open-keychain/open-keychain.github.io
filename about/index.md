@@ -26,4 +26,4 @@ OpenKeychain is designed to be trustworthy. It’s Free Software with no secrets
 
 ### Export Regulations
 We are [required to comply with U.S. export regulations](https://support.google.com/googleplay/android-developer/answer/113770) due to the distributon of our apps on Google Play.
-See [Export Regulations](http://www.openkeychain.org/contribute/export-regulations) for more information.
+See [Export Regulations](http://www.openkeychain.org/about/export-regulations) for more information.
