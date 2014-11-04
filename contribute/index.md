@@ -38,5 +38,5 @@ title="See more information on Transifex.com">Top translations: open-keychain »
 This website is also hosted as a git repository, so if you find spelling/grammer mistakes or want to add more content, you are very welcome to do so by submitting a pull request for the [open-keychain.github.io repository](https://github.com/open-keychain/open-keychain.github.io).
 
 # Export Regulations
-We are required to comply with U.S. export regulations due to the distributon of our apps on Google Play.
+We are [required to comply with U.S. export regulations](https://support.google.com/googleplay/android-developer/answer/113770) due to the distributon of our apps on Google Play.
 See [Export Regulations](http://www.openkeychain.org/contribute/export-regulations) for more information.
