@@ -23,3 +23,7 @@ OpenKeychain is designed to be trustworthy. It’s Free Software with no secrets
   * Near Field Communication: To exchange keys via NFC; Yubikey NEO support
   * Storage: To import/export keys from sd card
   * Identity/Contact: To pre-fill name, email, and search queries; integration with Android's contacts
+
+### Export Regulations
+We are [required to comply with U.S. export regulations](https://support.google.com/googleplay/android-developer/answer/113770) due to the distributon of our apps on Google Play.
+See [Export Regulations](http://www.openkeychain.org/contribute/export-regulations) for more information.
