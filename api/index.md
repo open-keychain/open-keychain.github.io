@@ -1,6 +1,6 @@
 ---
 layout: page
-title: For App Developers
+title: Developers
 ---
 
 
