@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Supported Apps
+title: Apps
 ---
 
 | App            | Description   | Install |
