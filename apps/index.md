@@ -3,6 +3,8 @@ layout: page
 title: Apps
 ---
 
+All apps on this page are compatible with OpenKeychain and can be configured to use it.
+
 | App            | Description   | Install |
 |:-------------- |:------------- | -------:|
 | [K-9 Mail](https://code.google.com/p/k9mail/)       | Best open source email client for Android | [Play](https://play.google.com/store/apps/details?id=com.fsck.k9), [F-Droid](https://f-droid.org/app/com.fsck.k9) |
