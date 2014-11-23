@@ -23,19 +23,21 @@ Currently, these versions are distributed via Google Play only:
 
   1. [Buy a YubiKey NEO](http://www.yubico.com/support/resellers/)
   2. [Prepare it for usage with OpenPGP using GnuPG and Yubico's tools](http://www.yubico.com/2012/12/yubikey-neo-openpgp/).
-  3. Export the keypair from GnuPG with ``gpg -a --output gpg-secret-key.asc --export-secret-keys <insert key id or name> `` and transfer the file to your Android device.
+  3. Export the keypair from GnuPG with
+     ``gpg -a --output gpg-secret-key.asc --export-secret-keys <insert key id or name> ``
+     and transfer the file to your Android device.
   4. In OpenKeychain, select "Import from file", select the file and import the keypair. It will be automatically detect that this is a keypair that works with a YubiKey only.
 
 You can now sign texts, files, emails, and everything that uses the [OpenPGP API](http://www.openkeychain.org/apps/). A screen will appear when you need to hold your YubiKey against the NFC antenna.
 
-## Use different PIN
+### Use different PIN
   1. Deselect "Use default YubiKey PIN" in OpenKeychain's advanced settings screen
   2. Follow [https://developers.yubico.com/ykneo-openpgp/CardEdit.html](https://developers.yubico.com/ykneo-openpgp/CardEdit.html)
 
-## Import existing key onto the YubiKey
+### Import existing key onto the YubiKey
 Follow [https://developers.yubico.com/ykneo-openpgp/KeyImport.html](https://developers.yubico.com/ykneo-openpgp/KeyImport.html)
 
-## Advanced Infos
+### Advanced Infos
   * [https://developers.yubico.com/ykneo-openpgp](https://developers.yubico.com/ykneo-openpgp)
   * [https://github.com/Yubico/ykneo-openpgp](https://github.com/Yubico/ykneo-openpgp)
 
