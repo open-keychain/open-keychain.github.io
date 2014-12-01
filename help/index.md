@@ -30,7 +30,7 @@ Currently, these versions are distributed via Google Play only:
      and transfer the file to your Android device.
   4. In OpenKeychain, select "Import from file", select the file and import the keypair. It will be automatically detect that this is a keypair that works with a YubiKey only.
 
-You can now use your YubiKey with everything that is based on the [OpenPGP API](http://www.openkeychain.org/apps/). A screen will appear when you need to hold your YubiKey against the NFC antenna.
+You can now use your YubiKey with OpenKeychain and compatible [apps](http://www.openkeychain.org/apps/). A screen will appear when you need to hold your YubiKey against the NFC antenna.
 
 ### Use different PIN
   1. Deselect "Use default YubiKey PIN" in OpenKeychain's advanced settings screen
