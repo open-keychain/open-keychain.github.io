@@ -39,25 +39,25 @@ Otherwise, they should be fine.
 Ideally, put the key on an sd card, import, then erase from the sd
 card. If your mobile does not have an sd card reader, read on.
 
-Our recommended method is to transfer the "through the cloud", but
-with a super-safe passphrase. Your key is _encrypted with its
-passphrase_, so if your passphrase is equally difficult to guess as
-your key, an attacker will not gain anything from your exported key
-file.
+Our recommended method is to transfer the exported key "through the
+cloud", but with a super-safe passphrase. Your key is _encrypted with
+its passphrase_, so if your passphrase is equally difficult to guess
+as your key, an attacker will gain no useful information from your
+exported key file.
 
- - Make up a long and complex passphrase. It should be at least 20
-   characters (more is better, although more than 50 is overkill),
-   with varying capitalization, many special characters and no words
-   from the dictionary. You can write it down, but you should destroy
-   the note afterwards, and make sure it is never transferred over the
-   internet!
- - Change the passphrase of your key to that one, and export it
- - Transfer the key file to your mobile by whatever way is most
-   convenient to you (Mail to yourself, PushBullet, Dropbox, ...)
- - Import the key with OpenKeychain, then delete the file from your
-   storage
- - Change the passphrase to an easier one which is still safe but
-   reasonable to type.
+ 1. Make up a long and complex passphrase. It should be at least 20
+    characters (more is better, although more than 50 is overkill),
+    with varying capitalization, many special characters and no words
+    from the dictionary. You can write it down, but you should destroy
+    the note afterwards, and make sure it is never transferred over
+    the internet!
+ 2. Change the passphrase of your key to that one, and export it
+ 3. Transfer the key file to your mobile by whatever way is most
+    convenient to you (Mail to yourself, PushBullet, Dropbox, ...)
+ 4. Import the key with OpenKeychain, then delete the file from your
+    storage.
+ 5. Change the passphrase to an easier one which is still safe, but
+    more reasonable to type.
 
 ## Why is OpenKeychain's database not password protected?
 
@@ -65,12 +65,8 @@ Your keys are already encrypted with their passphrase - that's the
 reason you have to input it for every crypto operation. There is no
 point in encrypting those keys again with another password, so
 password protecting the entire database would only protect the list of
-public keys.
-
-## Can I mark public keys as trusted without certifying them with my own key?
-
-No. You can, however, simply create a new key just for certification,
-which will essentially be the same thing.
+public keys. If this is important to you, consider using
+[full disk encryption](https://source.android.com/devices/tech/security/encryption/).
 
 ## Should I certify a key without manually comparing fingerprints?
 
@@ -86,6 +82,11 @@ However, scanning a QR code, receiving a key via NFC, or exchanging
 keys via SafeSlinger all have that same check already built-in, so
 as long as you trust the method used for key exchange, there is no
 reason to check the fingerprint again manually.
+
+## Can I mark public keys as trusted without certifying them with my own key?
+
+No. You can, however, simply create a new key just for certification,
+which will essentially be the same thing.
 
 # Getting in touch
 
