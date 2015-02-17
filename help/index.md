@@ -40,24 +40,31 @@ Ideally, put the key on an sd card, import, then erase from the sd
 card. If your mobile does not have an sd card reader, read on.
 
 Our recommended method is to transfer the exported key "through the
-cloud", but with a super-safe passphrase. Your key is _encrypted with
-its passphrase_, so if your passphrase is equally difficult to guess
-as your key, an attacker will gain no useful information from your
-exported key file.
+cloud", but with a super-safe passphrase which is only used during the
+transfer. Your key is **encrypted with its passphrase**, the only
+visible parts in the exported file are your public key.
 
- 1. Make up a long and complex passphrase. It should be at least 20
-    characters (more is better, although more than 50 is overkill),
-    with varying capitalization, many special characters and no words
-    from the dictionary. You can write it down, but you should destroy
-    the note afterwards, and make sure it is never transferred over
-    the internet!
- 2. Change the passphrase of your key to that one, and export it
+So is this really safe? The answer is: Yes, IF you use a good
+passphrase. If your passphrase is as difficult to guess as your key,
+an attacker will gain no useful information from your exported key
+file. To give you a (very!) rough impression, the passphrase
+"J0hnnnyy1995" is about a third as difficult to guess as a 2048 bit
+RSA key, while "%aBbaf11!o9$pP2,o9/=" is about the same.
+
+ 1. Make up a long and complex passphrase to use during the transfer.
+    It should be at least 20 characters (more is better, although more
+    than 50 is overkill), with varying capitalization, many special
+    characters and *no words from the dictionary*. Yes, it is annoying
+    to type, but you'll only use it once! You can also write it down,
+    but make sure to destroy the note afterwards, and make sure it is
+    never transferred over the internet!
+ 2. Change the passphrase of your key to that one, then export
  3. Transfer the key file to your mobile by whatever way is most
     convenient to you (Mail to yourself, PushBullet, Dropbox, ...)
  4. Import the key with OpenKeychain, then delete the file from your
     storage.
- 5. Change the passphrase to an easier one which is still safe, but
-    more reasonable to type.
+ 5. **Change the passphrase** to an easier one which is still safe,
+    but more reasonable to type.
 
 ## Why is OpenKeychain's database not password protected?
 
