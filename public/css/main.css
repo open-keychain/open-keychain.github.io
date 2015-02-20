@@ -361,6 +361,12 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased; }
 
+h1 {
+  font-size: xx-large; }
+
+h2, h3, h4, h5, h6 {
+  font-size: large; }
+
 h1, h2, h3, h4, h5, h6, p, ul, ol, dl,
 blockquote,
 table,
@@ -446,9 +452,9 @@ footer {
     color: #141e01; }
 
 .ok a {
-  color: #558b2f; }
+  color: #aa66cc; }
   .ok a:hover {
-    color: #8bc34a; }
+    color: #773399; }
 
 /*----------------------------------------------------------------------------*/
 .highlight {
