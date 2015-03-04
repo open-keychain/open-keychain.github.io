@@ -95,6 +95,15 @@ reason to check the fingerprint again manually.
 No. You can, however, simply create a new key just for certification,
 which will essentially be the same thing.
 
+## How can I specify connection port for Keyserver?
+
+Add a new Keyserver (or modify existing one) by going to Preferences -> General -> Keyservers. Enter the port number after the Keyserver address and preceded it by a colon. For example, "p80.pool.sks-keyservers.net:80" (without quotation marks) means that server "p80.pool.sks-keyservers.net" is working on a port 80.
+Default connection port is 11371 and it doesn't need to be specified.
+
+## A wrong primary user id is shown when searching on a Keyserver
+
+Unfortunately, this is a bug in the SKS Keyserver software. Its machine-readable output returns the user ids in an arbitrary order. Read the [related bug](https://bitbucket.org/skskeyserver/sks-keyserver/issue/28/primary-uid-in-machine-readable-index) report for more information.
+
 # Getting in touch
 
 ## Issues and Feature Requests
