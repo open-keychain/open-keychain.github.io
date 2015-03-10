@@ -3,6 +3,8 @@ layout: page
 title: FAQ
 ---
 
+# FAQ
+
 ## Are my secret keys safe on my mobile device?
 
 This is a very common question, and it's not an easy one. In the end
@@ -98,11 +100,7 @@ which will essentially be the same thing.
 Add a new Keyserver (or modify existing one) by going to Preferences -> General -> Keyservers. Enter the port number after the Keyserver address and preceded it by a colon. For example, "p80.pool.sks-keyservers.net:80" (without quotation marks) means that server "p80.pool.sks-keyservers.net" is working on a port 80.
 Default connection port is 11371 and it doesn't need to be specified.
 
-## A wrong primary user id is shown when searching on a Keyserver
-
-Unfortunately, this is a bug in the SKS Keyserver software. Its machine-readable output returns the user ids in an arbitrary order. Read the [related bug](https://bitbucket.org/skskeyserver/sks-keyserver/issue/28/primary-uid-in-machine-readable-index) report for more information.
-
-## Howto prepare a YubiKey NEO for OpenKeychain?
+## How to prepare a YubiKey NEO for OpenKeychain?
 
   1. [Buy a YubiKey NEO](http://www.yubico.com/support/resellers/)
   2. [Prepare it for usage with OpenPGP using GnuPG and Yubico's tools](http://www.yubico.com/2012/12/yubikey-neo-openpgp/).
@@ -115,18 +113,44 @@ Unfortunately, this is a bug in the SKS Keyserver software. Its machine-readable
 
 You can now use your YubiKey with OpenKeychain and compatible [apps](http://www.openkeychain.org/apps/). A screen will appear when you need to hold your YubiKey against the NFC antenna.
 
-## Use different YubiKey PIN
+## How to use a different YubiKey PIN?
   1. Deselect "Use default YubiKey PIN" in OpenKeychain's advanced settings screen
   2. Follow [https://developers.yubico.com/ykneo-openpgp/CardEdit.html](https://developers.yubico.com/ykneo-openpgp/CardEdit.html)
 
-## Import existing key onto the YubiKey
+## How to import an existing key onto the YubiKey?
 Follow [https://developers.yubico.com/ykneo-openpgp/KeyImport.html](https://developers.yubico.com/ykneo-openpgp/KeyImport.html)
 
 ## Advanced YubiKey Infos
   * [https://developers.yubico.com/ykneo-openpgp](https://developers.yubico.com/ykneo-openpgp)
   * [https://github.com/Yubico/ykneo-openpgp](https://github.com/Yubico/ykneo-openpgp)
 
-
-## Where can I find more information about OpenKeychain's security model and design decisions
+## Where can I find more information about OpenKeychain's security model and design decisions?
 
 Head over to our [Wiki](https://github.com/open-keychain/open-keychain/wiki).
+
+
+
+# Known Issues
+
+### Importing secret key fails
+
+Before posting a new bug report, please check if you are using gpg prior to 2.1.0 and changed the expiry date before exporting the secret key.
+
+Changing the expiry date of a key in gpg prior to version 2.1.0 breaks the secret key in a way which emerges only on export. It's not a problem with OpenKeychain, we correctly reject the key because its self-certificates are either invalid, or have wrong flags.
+
+This issue has been reported before (#996, #1026), and can be assumed to affect a large number of users. The bug in gpg has been fixed in gpg 2.1.0, but that version is as of now [only deployed in debian experimental](https://packages.debian.org/search?keywords=gnupg2), not even sid. Another [bug report]
+(https://bugs.g10code.com/gnupg/issue1817) has been opened by jas just today to backport the fix, so I hope this gets fixed soonish.
+
+* https://github.com/open-keychain/open-keychain/issues/996
+* https://github.com/open-keychain/open-keychain/issues/1003
+* https://github.com/open-keychain/open-keychain/issues/1026
+
+
+## A wrong primary user id is shown when searching on a Keyserver
+
+Unfortunately, this is a bug in the SKS Keyserver software. Its machine-readable output returns the user ids in an arbitrary order. Read the [related bug](https://bitbucket.org/skskeyserver/sks-keyserver/issue/28/primary-uid-in-machine-readable-index) report for more information.
+
+### Not working with AOSP Mail
+
+For now, OpenKeychain will not support AOSP Mail.See https://github.com/open-keychain/open-keychain/issues/290
+
