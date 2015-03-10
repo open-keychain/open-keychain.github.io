@@ -138,13 +138,8 @@ Before posting a new bug report, please check if you are using gpg prior to 2.1.
 
 Changing the expiry date of a key in gpg prior to version 2.1.0 breaks the secret key in a way which emerges only on export. It's not a problem with OpenKeychain, we correctly reject the key because its self-certificates are either invalid, or have wrong flags.
 
-This issue has been reported before (#996, #1026), and can be assumed to affect a large number of users. The bug in gpg has been fixed in gpg 2.1.0, but that version is as of now [only deployed in debian experimental](https://packages.debian.org/search?keywords=gnupg2), not even sid. Another [bug report]
+This issue has been reported before ([#996](https://github.com/open-keychain/open-keychain/issues/996), [#1003](https://github.com/open-keychain/open-keychain/issues/1003), [#1026](https://github.com/open-keychain/open-keychain/issues/1026)), and can be assumed to affect a large number of users. The bug in gpg has been fixed in gpg 2.1.0, but that version is as of now [only deployed in debian experimental](https://packages.debian.org/search?keywords=gnupg2), not even sid. Another [bug report]
 (https://bugs.g10code.com/gnupg/issue1817) has been opened by jas just today to backport the fix, so I hope this gets fixed soonish.
-
-* https://github.com/open-keychain/open-keychain/issues/996
-* https://github.com/open-keychain/open-keychain/issues/1003
-* https://github.com/open-keychain/open-keychain/issues/1026
-
 
 ## A wrong primary user id is shown when searching on a Keyserver
 
@@ -152,5 +147,5 @@ Unfortunately, this is a bug in the SKS Keyserver software. Its machine-readable
 
 ### Not working with AOSP Mail
 
-For now, OpenKeychain will not support AOSP Mail.See https://github.com/open-keychain/open-keychain/issues/290
+For now, OpenKeychain will not support AOSP Mail due to bugs in AOSP were we cannot work around ([#290](https://github.com/open-keychain/open-keychain/issues/290)).
 
