@@ -3,6 +3,11 @@ layout: page
 title: Contribute
 ---
 
+#  Help us coding
+
+If you want to contribute to OpenKeychain, please fork our Git-Repository, make your changes and create a pull-request.
+We also have a [small guide in our README how to start hacking](https://github.com/open-keychain/open-keychain#how-to-help-the-project).
+
 # Translations
 
 Help translating OpenKeychain! Everybody can participate at [OpenKeychain on Transifex](http://www.transifex.com/projects/p/open-keychain/).  
@@ -26,7 +31,3 @@ More technical information and examples about these APIs can be found in the pro
   * [Intent API](https://github.com/open-keychain/open-keychain/wiki/Intent-API)
   * [Remote OpenPGP API](https://github.com/open-keychain/open-keychain/wiki/OpenPGP-API)
 
-#  Help us coding
-
-If you want to contribute to OpenKeychain, please fork our Git-Repository, make your changes and create a pull-request.
-We also have a [small guide in our README how to start hacking](https://github.com/open-keychain/open-keychain#how-to-help-the-project).
