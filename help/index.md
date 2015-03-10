@@ -3,7 +3,7 @@ layout: page
 title: Help
 ---
 
-**Please read our [FAQ page](http://www.openkeychain.org/faq/] before creating new bug reports or contacting us via our mailinglist**
+**Please read our [FAQ page](http://www.openkeychain.org/faq/) before creating new bug reports or contacting us via our mailinglist**
 
 # Getting in touch
 

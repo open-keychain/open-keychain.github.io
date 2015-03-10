@@ -4,14 +4,14 @@
 - url: /about
   title: About
   
+- url: /faq
+  title: FAQ
+  
 - url: /help
   title: Help
   
 - url: /apps
   title: Apps
-  
-- url: /api
-  title: Developers
   
 - url: /contribute
   title: Contribute
