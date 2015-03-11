@@ -103,10 +103,10 @@ public keys. If this is important to you, consider using
 Add a new Keyserver (or modify existing one) by going to Preferences -> General -> Keyservers. Enter the port number after the Keyserver address and preceded it by a colon. For example, "p80.pool.sks-keyservers.net:80" (without quotation marks) means that server "p80.pool.sks-keyservers.net" is working on a port 80.
 Default connection port is 11371 and it doesn't need to be specified.
 
-## I have more than one subkey capable of singing. Which one is selected when signing with this key?
+## I have more than one subkey capable of singing. Which one is selected when signing with this OpenPGP key?
 
 OpenKeychain assumes that OpenPGP keys hold one usable signing subkey only and selects the first non-revoked non-expired non-stripped one it finds in the unordered list of subkeys.
-We consider having more than one valid signing subkey an advanced usecase. You can either strip subkeys that should not be used using OpenKeychain's edit screen or explicitly selecting the right subkeys when exporting from gpg with ``gpg --expory-secret-subkeys``.
+We consider having more than one valid signing subkey an advanced usecase. You can either strip subkeys that should not be used using OpenKeychain's edit key screen or explicitly select the right subkeys when exporting from gpg with ``gpg --export-secret-subkeys``.
 
 ## How to prepare a YubiKey NEO for OpenKeychain?
 
