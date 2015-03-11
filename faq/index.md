@@ -3,7 +3,7 @@ layout: page
 title: FAQ
 ---
 
-# FAQ
+# Frequently Asked Questions
 
 ## Are my secret keys safe on my mobile device?
 
@@ -65,16 +65,7 @@ RSA key, while "%aBbaf11!o9$pP2,o9/=" is about the same.
     storage.
  5. **Change the passphrase** to an easier one which is still safe,
     but more reasonable to type.
-
-## Why is OpenKeychain's database not password protected?
-
-Your keys are already encrypted with their passphrase - that's the
-reason you have to input it for every crypto operation. There is no
-point in encrypting those keys again with another password, so
-password protecting the entire database would only protect the list of
-public keys. If this is important to you, consider using
-[full disk encryption](https://source.android.com/devices/tech/security/encryption/).
-
+    
 ## Should I certify a key without manually comparing fingerprints?
 
 To certify someone's key, you should make sure that it's really that
@@ -94,11 +85,28 @@ reason to check the fingerprint again manually.
 
 No. You can, however, simply create a new key just for certification,
 which will essentially be the same thing.
+    
+
+# Avanced Questions
+
+## Why is OpenKeychain's database not password protected?
+
+Your keys are already encrypted with their passphrase - that's the
+reason you have to input it for every crypto operation. There is no
+point in encrypting those keys again with another password, so
+password protecting the entire database would only protect the list of
+public keys. If this is important to you, consider using
+[full disk encryption](https://source.android.com/devices/tech/security/encryption/).
 
 ## How can I specify connection port for Keyserver?
 
 Add a new Keyserver (or modify existing one) by going to Preferences -> General -> Keyservers. Enter the port number after the Keyserver address and preceded it by a colon. For example, "p80.pool.sks-keyservers.net:80" (without quotation marks) means that server "p80.pool.sks-keyservers.net" is working on a port 80.
 Default connection port is 11371 and it doesn't need to be specified.
+
+## I have more than one subkey capable of singing. Which one is selected when signing with this key?
+
+OpenKeychain assumes that OpenPGP keys hold one usable signing subkey only and selects the first non-revoked non-expired non-stripped one it finds in the unordered list of subkeys.
+We consider having more than one valid signing subkey an advanced usecase. You can either strip subkeys that should not be used using OpenKeychain's edit screen or explicitly selecting the right subkeys when exporting from gpg with ``gpg --expory-secret-subkeys``.
 
 ## How to prepare a YubiKey NEO for OpenKeychain?
 
