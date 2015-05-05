@@ -23,11 +23,10 @@ This website is also hosted as a git repository, so if you find spelling/grammer
 
 ## API
 
-OpenKeychain provides two APIs, namely the Intent API and the Remote OpenPGP API. The Intent API can be used without permissions to start OpenKeychain's activities for cryptographic operations, import of keys, etc. However, it always requires user input, so that no malicious application can use this API without user intervention.
-The Remote OpenPGP API is more sophisticated and allows to to operations without user interaction in the background. When utilizing this API, OpenKeychain asks the user on first use to grant access for the calling client application.
+OpenKeychain provides two APIs, namely the OpenKeychain Intents and the OpenPGP API. The Intents can be used without permissions to start OpenKeychain's activities for cryptographic operations, import of keys, etc. However, it always requires user input, so that no malicious application can use this API without user intervention.
+The OpenPGP API is more sophisticated and allows to to operations without user interaction in the background. When utilizing this API, OpenKeychain asks the user on first use to grant access for the calling client application.
 
-More technical information and examples about these APIs can be found in the project's wiki:
+More technical information and examples for these APIs can be found here:
 
-  * [Intent API](https://github.com/open-keychain/open-keychain/wiki/Intent-API)
-  * [Remote OpenPGP API](https://github.com/open-keychain/open-keychain/wiki/OpenPGP-API)
-
+  * [OpenKeychain Intents](https://github.com/open-keychain/openkeychain-intents)
+  * [OpenPGP API](https://github.com/open-keychain/openpgp-api)
