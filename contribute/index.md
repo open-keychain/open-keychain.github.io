@@ -3,10 +3,11 @@ layout: page
 title: Contribute
 ---
 
-##  Help us coding
+##  Donate Code
 
-If you want to contribute to OpenKeychain, please fork our Git-Repository, make your changes and create a pull-request.
-We also have a [small guide in our README how to start hacking](https://github.com/open-keychain/open-keychain#how-to-help-the-project).
+OpenKeychain is developed in a very open way by many contributors in their free time.
+We appreciate all contribtions and provide feedback for all incoming pull requests which can clearly be seen by the ratio of [opened vs. closed pull requests](https://github.com/open-keychain/open-keychain/pulls).
+So, if you want to start hacking, read our [5 points guide on Github](https://github.com/open-keychain/open-keychain#how-to-help-the-project) and fork OpenKeychain!
 
 ## Translations
 
