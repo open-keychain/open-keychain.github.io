@@ -3,9 +3,11 @@ layout: page
 title: Contribute
 ---
 
-##  Donate Code
+##  Donate code!
 
-OpenKeychain is developed in a very open way by many contributors in their free time.
+<img style="float: left" src="{{ site.url }}/public/images/github.png" />
+
+OpenKeychain is developed in an open way by many contributors in their free time.
 We appreciate all contribtions and provide feedback for all incoming pull requests which can clearly be seen by the ratio of [opened vs. closed pull requests](https://github.com/open-keychain/open-keychain/pulls).
 So, if you want to start hacking, read our [5 points guide on Github](https://github.com/open-keychain/open-keychain#how-to-help-the-project) and fork OpenKeychain!
 
