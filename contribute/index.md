@@ -5,7 +5,7 @@ title: Contribute
 
 ##  Donate code!
 
-<img style="float: left" src="{{ site.url }}/public/images/github.png" />
+<img style="float: right" src="{{ site.url }}/public/images/github.png" />
 
 OpenKeychain is developed in an open way by many contributors in their free time.
 We appreciate all contribtions and provide feedback for all incoming pull requests which can clearly be seen by the ratio of [opened vs. closed pull requests](https://github.com/open-keychain/open-keychain/pulls).
