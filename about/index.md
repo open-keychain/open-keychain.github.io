@@ -24,3 +24,5 @@ OpenKeychain is designed to be trustworthy. It’s Free Software with no secrets
   * Storage: To import/export keys from sd card
   * Identity/Contact: To pre-fill name, email, and search queries; integration with Android's contacts
   * Camera: To scan QR Codes for adding keys
+  
+Because OpenKeychain is Free Software, anyone can validate that the permissions are indeed only required for the listed features.
