@@ -15,6 +15,10 @@ If you find a bug or you need some feature, please create [an issue on our Githu
 
 You can find [our mailinglist at Google Groups](http://groups.google.com/d/forum/openpgp-keychain-dev).
 
+## IRC Channel
+
+Our IRC Channel can be found on [Freenode](https://freenode.net): ``#openkeychain``
+
 ## Beta Versions
 
 We are glad you want to test Beta versions of OpenKeychain and report early bugs.
