@@ -3,11 +3,13 @@ layout: page
 title: About
 ---
 
-<a href="https://f-droid.org/app/org.sufficientlysecure.keychain"><img style="float: right" src="{{ site.url }}/public/images/fdroid.png" /></a>
+<div style="float: right">
+<a href="https://f-droid.org/app/org.sufficientlysecure.keychain"><img src="{{ site.url }}/public/images/fdroid.png" /></a>
 
-<a href="ttps://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain"><img style="float: right" src="{{ site.url }}/public/images/google_play.png" />
+<a href="ttps://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain"><img src="{{ site.url }}/public/images/google_play.png" />
 
-<img style="float: right" src="{{ site.url }}/public/images/screen1.png" />
+<img src="{{ site.url }}/public/images/screen1.png" />
+</div>
 
 OpenKeychain helps you communicate more privately and securely. It uses high-quality modern encryption to ensure that your messages can be read only by the people you send them to, others can send you messages that only you can read, and these messages can be digitally signed so the people getting them are sure who sent them. OpenKeychain is based on the well established OpenPGP standard making encryption compatible across your devices and operating systems.
 
