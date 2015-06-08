@@ -41,7 +41,7 @@
 					<h2>How To Encrypt your Emails on Android</h2>
 					<h3>Encrypting your emails with OpenKeychain is easier than you think.</h3>
 					<p>
-					  <small>Created by <a href="https://github.com/nuntius35">nuntius35</a>, OpenKeychain-Team</small>
+					  <small>Created by <a href="https://github.com/nuntius35">nuntius35</a>, <a href="https://openkeychain.org">OpenKeychain developers</a></small>
 					</p>
 					<br>
 					<p> 
@@ -68,9 +68,7 @@
 				        <section>
 					<h2>Step 1: Installing OpenKeychain</h2>
 					<ul>
-						<li><em>Remember:</em> We assume you use K-9 mail as your email app.</li>
 						<li>Just install <a href="http://openkeychain.org">OpenKeychain</a> from the <em>Google Play Store</em>.</li>
-						<li>It's free!</li>
 						<li>It's also available from <a href="https://f-droid.org">F-Droid</a>.</li>
 						<li>We recommend to use F-Droid as an alternative to Google Play.</li>
 					</ul>
@@ -86,8 +84,8 @@
 				        <section>
 					<h2>Step 2: Create your personal key</h2>
 					<ul>
-						<li>Others can encrypt emails with this key and send them to you.</li>
-						<li>Only you can decrypt these emails with your personal key</li>
+						<li>Only you can decrypt these emails with your personal key.</li>
+						<li>After creation, others can encrypt emails using this key and send them to you.</li>
 					  </ul>
 				        </section>
 				        <section id="setup_start">
@@ -143,42 +141,43 @@
 				        <section id="export">
 					<h2>Step 3: Export your personal key</h2>
 					<ul>
-						<li><em>Remember:</em> You must not loose your personal key.</li>
+						<li><em>Caution:</em> You must not loose your personal key.</li>
 						<li>Therefore we are going to export it to a file which can be stored at a save place.</li>
 					</ul>
 				        </section>
 				        <section id="export_key">
 					<h3>Click on your key, select <em>Export</em></h3>
-					  <p>Also select the checkbox to also export the secret parts of the key. This file has to be stored at a save (offline) place.</p>
+					  <p>Also select the checkbox to also export the secret parts of the key. This file has to be stored at a save place, e.g., on an USB stick.</p>
 					  <a href="#/export_asc">
 							<img height="400" data-src="img/09_export_key.png" alt="OpenKeychain">
 						</a>
 				        </section>
-				        <section id="export_asc">
+				        <!--<section id="export_asc">
 				        <h3>It should look like this</h3>
 					  <a href="#/import">
 							<img height="450" data-src="img/10_export_asc.png" alt="OpenKeychain">
 						</a>
-				        </section>
+				        </section>-->
 					
 				
 				        <section id="import">
 					<h2>Step 4: Import other people's keys</h2>
 					<ul>
-						<li>Before sending encrypted mails to some address you need to get a key for this address.</li>
+						<li>Before sending encrypted emails to an address, you need to get a key for this address.</li>
 						<li>OpenKeychain can download keys from the Internet.</li>
-						<li>If you want to be sure, that you get the right key, inform yourself about <em>fingerprints</em>.</li>
-						<li>Now we want to find the key for the address <a href="mailto:adele-en@gnupp.de">adele-en@gnupp.de. </a></li>
+						<li>To make sure that you get the right key you can scan other people's QR Codes or compare fingerprints (This will be part of a different HowTo).</li>
+						<li>For a simple test, we want to get the key for the address <a href="mailto:adele-en@gnupp.de">adele-en@gnupp.de</a>.</li>
 					</ul>
 				        </section>
 				        <section id="import_start">
-					<h3>Import key: You want to <em>search the cloud</em></h3>
+					<h3>Import key: You want to <em>Search Cloud</em></h3>
 					  <a href="#/import_adele">
 							<img data-src="img/11_import_start.png" alt="OpenKeychain">
 						</a>
 				        </section>
 				        <section id="import_adele">
-					<h3>Make sure you choose the right key and press <em>Import</em></h3>
+					<h3>Search in the cloud</h3>
+					<p>Search for <a href="mailto:adele-en@gnupp.de">adele-en@gnupp.de</a>, choose the right key and press <em>Import</em></p>
 					  <a href="#/import_done">
 							<img height="500" data-src="img/12_import_adele.png" alt="OpenKeychain">
 						</a>
@@ -194,8 +193,7 @@
 				        <section id="k9">
 					<h2>Step 5: Configure K-9 Mail</h2>
 					<ul>
-						<li>The settings of K-9 mail are horrible.</li>
-						<li>But with a little help, it's easy.</li>
+						<li>With a little help, it's easy.</li>
 						<li>Just follow us four levels deep into the menu.</li>
 					</ul>
 				        </section>
@@ -268,7 +266,7 @@
 						</a>
 				        </section>
 				        <section id="send_password">
-					<h3>Signing accesses your private key: password!</h3>
+					<h3>Signing accesses your personal key: password!</h3>
 					  <a href="#/receive">
 							<img data-src="img/21_send_password.png" alt="OpenKeychain">
 						</a>
@@ -298,15 +296,7 @@
 
 				<section id="theend">
 					<h1>Congratulations!</h1>
-					<p> You just learned how to send an receive encrypted emails.</p>
-					<p> If you are interested, there is much more to learn about OpenKeychain</p>
-					<ul>
-						<li><a href="https://en.wikipedia.org/wiki/Public_key_fingerprint">Fingerprints</a></li>
-						<li><a href="https://www.yubico.com/">Yubi Key</a></li>
-						<li><a href="https://github.com/siacs/Conversations">Conversations</a></li>
-						<li><a href="https://www.bouncycastle.org/">Bouncy Castle</a></li>
-						<li>...</li>
-					</ul>
+					<p>You just learned how to send an receive encrypted emails.</p>
 				</section>
 			</div>
 		</div>
