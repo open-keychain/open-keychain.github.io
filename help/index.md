@@ -28,5 +28,5 @@ Currently, these versions are distributed via Google Play only:
  2. Visit this [special Google Play link and apply as a beta tester](https://play.google.com/apps/testing/org.sufficientlysecure.keychain)
 
 # Export Regulations
-We are [required to comply with U.S. export regulations](https://support.google.com/googleplay/android-developer/answer/113770) due to the distributon of our apps on Google Play.
+We are required to comply with U.S. export regulations due to the distributon of our apps on Google Play.
 See [Export Regulations](http://www.openkeychain.org/help/export-regulations) for more information.
