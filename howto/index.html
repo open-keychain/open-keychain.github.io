@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Email Encryption with Android -- A Quick Start Guide</title>
+
+		<meta name="description" content="A short guide to send your first OpenPGP encrypted email from your android phone using OpenKeychain and K-9 Mail">
+		<meta name="author" content="nuntius35">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>You have nothing to hide?</h1>
+					<h3>Encrypting your Mails is easier than you think.</h3>
+					<p>
+					  <small>Created by <a href="https://github.com/nuntius35">nuntius35</a></small>
+					</p>
+					<br>
+					<p> 
+					  <small>Use the <em>Space</em> key to navigate through this tutorial.</small>
+					</p>
+				</section>
+				
+				        <section>
+					<h2>In this Tutorial you will learn</h2>
+					<ul>
+						<li>how to create your personal PGP key,</li>
+						<li>how to find other people's public keys,</li>
+						<li>how to setup K-9 mail to work with OpenKeychain,</li>
+						<li>and finally how to send and receive encrypted messages.</li>
+					</ul>
+					</section>
+				        <section>
+					<h2>Prerequisites</h2>
+					<ul>
+						<li>An Android device with working K-9 Mail app</li>
+						<li>Interest in cryptography</li>
+						<li>A little bit patience</li>
+					</ul>
+					</section>
+				
+				        <section>
+					<h2>Step 0: What you need to know about Cryptography</h2>
+					  <ul>
+						<li>Modern cryptography is based on advanced mathematics,</li>
+						<li>such as prime numbers, logarithms and elliptic curves.</li>
+						<li>Luckily it <em>works</em> even if you don't understand it.</li>
+						<li>However, it helps to know some basics.</li>
+					  </ul>
+				        </section>
+				        <section>
+					<h3>Asymmetric cryptography</h3>
+					  <ul>
+						<li>PGP encryption for email is asymmetric: all keys come in pairs (public and private).</li>
+						<li>A <em>public key</em> is used to encrypt a message.</li>
+						<li>Only the owner of the associated <em>private key</em> can decrypt such a message.</li>
+						<li>Since he is the only one who knows the private key he can prove his identity: sign a message.</li>
+						<li> Carefully remember the rules on the next slide.</li>
+					  </ul>
+					</section>
+				        <section>
+				        <h3>The rules</h3>
+					  <ul>
+						<li>Your own public key is not a secret.</li>
+						<li>On the opposite: Upload it to a keyserver and let the world know about it.</li>
+						<li>If you want to <em>send</em> someone a secret message, you need to obtain the persons's public key.</li>
+						
+						<li>Your private key is secret.</li>
+						<li>Never ever show it to anyone. Protect it with a strong password.</li>
+						<li>If you want to <em>read</em> a message sent to you, you need access to your private key. </li>
+						<li>Hence, if you loose your private key, you cannot read  messages sent to you. Make a backup.</li>
+					  </ul>
+				        </section>
+				
+				        <section>
+					<h2>Step 1: Installing OpenKeychain</h2>
+					<ul>
+						<li><em>Remember:</em> We assume you use K-9 mail as your email app.</li>
+						<li>Just install <a href="http://openkeychain.org">OpenKeychain</a> from the <em>Google Play Store</em>.</li>
+						<li>It's free! Not only the price but also the code.</li>
+						<li>Therefore it's also available from <a href="https://f-droid.org">F-Droid</a>.</li>
+						<li>If you don't want to give all power to Google, check out the F-Droid app.</li>
+					</ul>
+				        </section>
+				        <section>
+					<h3>Installation via the F-Droid App (optional)</h3>
+					  <a href="https://f-droid.org/repository/browse/?fdid=org.sufficientlysecure.keychain">
+							<img height="500" data-src="img/01_f-droid_keychain.png" alt="Installation of OpenKeychain via the F-Droid app.">
+						</a>
+				        </section>
+					
+				
+				        <section>
+					<h2>Step 2: Create your personal pair of PGP keys</h2>
+					<ul>
+						<li>Remember: A public key is needed for sending messages, a private key is needed for reading messages.</li>
+					  </ul>
+				        </section>
+				        <section id="setup_start">
+					<h3>A friendly welcome screen</h3>
+					  <p> Just press <em>Creaty Key</em></p>
+					  <a href="#/setup_name">
+							<img height="500" data-src="img/02_setup_start.png" alt="OpenKeychain: Welcome screen">
+						</a>
+				        </section>
+				        <section id="setup_name">
+					<h3>Input your name</h3>
+					  <a href="#/setup_mail">
+							<img data-src="img/03_setup_name.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="setup_mail">
+					<h3>Input your email</h3>
+					  
+					  <a href="#/setup_password">
+							<img data-src="img/04_setup_mail.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="setup_password">
+				        <h3>Input your password</h3>
+				          <p> Make sure it's a <em>good</em> one</p>
+					  <a href="#/setup_create">
+							<img data-src="img/05_setup_password.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="setup_create">
+				        <h3>Create the key...</h3>
+				          <p>No need to change the default setting.</p>
+					  <a href="#/setup_wait">
+							<img height="500" data-src="img/06_setup_create.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="setup_wait">
+				        <h3>... and wait ...</h3>
+				          <p> </p>
+					  <a href="#/setup_finished">
+							<img height="500" data-src="img/07_setup_wait.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="setup_finished">
+				        <h3>... and done!</h3>
+				          <p> </p>
+					  <a href="#/export">
+							<img data-src="img/08_setup_finished.png" alt="OpenKeychain">
+						</a>
+				        </section>
+					
+				
+				        <section id="export">
+					<h2>Step 3: Export your PGP key</h2>
+					<ul>
+						<li><em>Remember:</em> You must not loose your private key.</li>
+						<li>Therefore we are going to export it to a file which can be stored at a save place.</li>
+					</ul>
+				        </section>
+				        <section id="export_key">
+					<h3>Click on your key, select <em>Export</em></h3>
+					  <p>Also select to export the secret key. This file has to be stored at a save (offline) place.</p>
+					  <a href="#/export_asc">
+							<img height="400" data-src="img/09_export_key.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="export_asc">
+				        <h3>It should look like this</h3>
+					  <a href="#/import">
+							<img height="450" data-src="img/10_export_asc.png" alt="OpenKeychain">
+						</a>
+					  <p>and similarly for the private key.</p>
+				        </section>
+					
+				
+				        <section id="import">
+					<h2>Step 4: Import other people's public keys</h2>
+					<ul>
+						<li>Before sending encrypted mails to some address you need to get a public key of this address.</li>
+						<li>OpenKeychain can download public keys from the internet.</li>
+						<li>If you want to be sure, that you get the right key, inform yourself about <em>fingerprints</em>.</li>
+						<li>Now we want to find the key for the address <a href="mailto:adele-en@gnupp.de">adele-en@gnupp.de. </a></li>
+					</ul>
+				        </section>
+				        <section id="import_start">
+					<h3>Import key: You want to <em>search the cloud</em></h3>
+					  <a href="#/import_adele">
+							<img data-src="img/11_import_start.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="import_adele">
+					<h3>Make sure you choose the right key and press <em>Import</em></h3>
+					  <a href="#/import_done">
+							<img height="500" data-src="img/12_import_adele.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="import_done">
+					<h3>You have successfully imported a key</h3>
+					  <a href="#/k9">
+							<img data-src="img/13_import_done.png" alt="OpenKeychain">
+						</a>
+				        </section>
+					
+				
+				        <section id="k9">
+					<h2>Step 5: Configure K-9 Mail</h2>
+					<ul>
+						<li>The settings of K-9 mail are horrible.</li>
+						<li>But with a little help, it's easy.</li>
+						<li>Just follow us four levels deep into the menu.</li>
+					</ul>
+				        </section>
+				        <section id="k9_settings">
+					<h3>Settings ...</h3>
+					  <a href="#/k9_account">
+							<img data-src="img/14_k9_settings.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="k9_account">
+					<h3>... Account Settings ...</h3>
+					  <a href="#/k9_crypto">
+							<img data-src="img/15_k9_account.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="k9_crypto">
+					<h3>... Cryptography ...</h3>
+					  <a href="#/k9_provider">
+							<img height="500" data-src="img/16_k9_crypto.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="k9_provider">
+					<h3>... and now you choose OpenKeychain. And done.</h3>
+					  <a href="#/send">
+							<img height="500" data-src="img/17_k9_provider.png" alt="OpenKeychain">
+						</a>
+				        </section>
+					
+				
+				        <section id="send">
+					<h2>Step 6: Compose your first encrypted mail to Adele</h2>
+					<ul>
+						<li>Adele is a friendly email robot.</li>
+						<li>You send an email with your public key.</li>
+						<li>She replies with an encrypted mail.</li>
+						<li>What are you waiting for?</li>
+					</ul>
+				        </section>
+				        <section id="send_share">
+					<h3>Share your key from OpenKeychain</h3>
+					  <p>Open extended information and share your key with K-9.</p>
+					  <a href="#/send_share">
+							<img height="190" data-src="img/18_1_send_extendedinfo.png" alt="OpenKeychain">
+						</a>
+					  <a href="#/send_share">
+							<img  height="80" data-src="img/18_2_send_sharewith.png" alt="OpenKeychain">
+						</a>
+					  <a href="#/send_compose">
+							<img height="100" data-src="img/18_3_send_sharewithk9.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="send_compose">
+					<h3>Compose email in K-9</h3>
+					  <p>Select <em>sign</em> and <em>encrypt</em>. Then <em>send</em>.</p>
+					  <a href="#/send_warning">
+							<img data-src="img/18_send_compose.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="send_warning">
+					<h3>It's your first time: allow K-9 Mail access...</h3>
+					  <a href="#/send_confirm">
+							<img data-src="img/19_send_warning.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="send_confirm">
+					<h3>... and choose your own key.</h3>
+					  <p>This only have to be done once. Now everything is in place.</p>
+					  <a href="#/send_password">
+							<img data-src="img/20_send_confirm.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="send_password">
+					<h3>Signing accesses your private key: password!</h3>
+					  <a href="#/receive">
+							<img data-src="img/21_send_password.png" alt="OpenKeychain">
+						</a>
+				        </section>
+					
+				
+				        <section id="receive">
+					<h2>Step 7: Receive your first encrypted mail from Adele</h2>
+					<ul>
+						<li>It's an exciting moment, isn't it?</li>
+					</ul>
+				        </section>
+				        <section id="receive_newmail">
+					<h3>You've got mail!</h3>
+					  <a href="#/receive_decrypted">
+							<img data-src="img/22_receive_newmail.png" alt="OpenKeychain">
+						</a>
+				        </section>
+				        <section id="receive_decrypted">
+					<h3>Encryption is done automatic, but needs password</h3>
+					  <p>Unless the password is still cached by OpenKeychain.</p>
+					  <a href="#/theend">
+							<img height="500" data-src="img/23_receive_decrypted.png" alt="OpenKeychain">
+						</a>
+				        </section>
+					
+
+				<section id="theend">
+					<h1>Congratulations!</h1>
+					<p> You just learned how to send an receive encrypted emails.</p>
+					<p> If you are interested, there is much more to learn about OpenKeychain</p>
+					<ul>
+						<li><a href="https://en.wikipedia.org/wiki/Public_key_fingerprint">Fingerprints</a></li>
+						<li><a href="https://www.yubico.com/">Yubi Key</a></li>
+						<li><a href="https://github.com/siacs/Conversations">Conversations</a></li>
+						<li><a href="https://www.bouncycastle.org/">Bouncy Castle</a></li>
+						<li>...</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
