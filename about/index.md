@@ -23,10 +23,9 @@ OpenKeychain is designed to be trustworthy. It’s Free Software with no secrets
 
 ### Permissions
 
-  * Full network access: To query keyservers
-  * Near Field Communication: To exchange keys via NFC; Yubikey NEO support
-  * Storage: To import/export keys from sd card
-  * Identity/Contact: To pre-fill name, email, and search queries; integration with Android's contacts
-  * Camera: To scan QR Codes for adding keys
+  * Identity: Pre-fill name and email addresses
+  * Contacts: Integration with Android's contacts
+  * Photos/Media/Files: Import/export keys from SD card
+  * Camera: Scan QR Codes to add other people's keys
   
 Because OpenKeychain is Free Software, anyone can validate that the permissions are indeed only required for the listed features.
