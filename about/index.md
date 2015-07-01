@@ -27,5 +27,6 @@ OpenKeychain is designed to be trustworthy. It’s Free Software with no secrets
   * Contacts: Connect keys to your contacts (only offline)
   * Photos/Media/Files: Import/export keys from SD card
   * Camera: Scan QR Codes to add other people's keys
+  * Others: Internet permission to retrieve keys, NFC permission to use YubiKeys
   
 Because OpenKeychain is Free Software, anyone can validate that the permissions are indeed only required for the listed features.
