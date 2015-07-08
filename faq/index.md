@@ -69,6 +69,13 @@ Your keys are already encrypted with their passphrase - that's the reason you ha
 There is no point in encrypting those keys again with another password, so password protecting the entire database would only protect the list of public keys.
 If this is important to you, consider using [full disk encryption](https://source.android.com/devices/tech/security/encryption/).
 
+## Everyone can delete my keys. Why is there no passphrase request before?
+Anyone who can physically access your device can simply delete the app data from Android OS.
+Also, asking for a passphrase before delete would prevent you from deleting keys where you forgot your passphrase
+
+## Why is my passphrase requested when I backup my keys?
+It is not required cryptographically, but prevents simple stealing of your keys.
+
 ## How can I specify connection port for Keyserver?
 
 Add a new Keyserver (or modify existing one) by going to Preferences -> General -> Keyservers. Enter the port number after the Keyserver address and preceded it by a colon.
