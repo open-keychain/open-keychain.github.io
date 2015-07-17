@@ -28,35 +28,35 @@ Otherwise, they should be fine.
 Ideally, put the key on an sd card, import, then erase from the sd card.
 If your mobile does not have an sd card reader, read on.
 
-Our recommended method is to transfer the exported key "through the cloud", but with a super-safe passphrase which is only used during the transfer.
-Your key is **encrypted with its passphrase**, the only visible parts in the exported file are your public key.
+Our recommended method is to transfer the exported key "through the cloud", but with a super-safe password which is only used during the transfer.
+Your key is **encrypted with its password**, the only visible data in the exported file is the public part which is uploaded to keyservers.
 
-So is this really safe? The answer is: Yes, IF you use a good passphrase.
-If your passphrase is as difficult to guess as your key, an attacker will gain no useful information from your exported key file.
-To give you a (very!) rough impression, the passphrase "J0hnnnyy1995" is about a third as difficult to guess as a 2048 bit RSA key, while "%aBbaf11!o9$pP2,o9/=" is about the same.
+So is this really safe? The answer is: Yes, IF you use a good password.
+If your password is as difficult to guess as your key, an attacker will gain no useful information from your exported key file.
+To give you a (very!) rough impression, the password "J0hnnnyy1995" is about a third as difficult to guess as a 2048 bit RSA key, while "%aBbaf11!o9$pP2,o9/=" is about the same.
 
- 1. Make up a long and complex passphrase to use during the transfer.
+ 1. Make up a long and complex password to use during the transfer.
     It should be at least 20 characters (more is better, although more than 50 is overkill), with varying capitalization, many special characters and *no words from the dictionary*.
     Yes, it is annoying to type, but you'll only use it once!
     You can also write it down, but make sure to destroy the note afterwards, and make sure it is never transferred over the internet!
- 2. Change the passphrase of your key to that one, then export
+ 2. Change the password of your key to that one, then export
  3. Transfer the key file to your mobile by whatever way is most convenient to you (Mail to yourself, PushBullet, Dropbox, ...)
  4. Import the key with OpenKeychain, then delete the file from your storage.
- 5. **Change the passphrase** to an easier one which is still safe, but more reasonable to type.
+ 5. **Change the password** to an easier one which is still safe, but more reasonable to type.
     
-## Should I certify a key without manually comparing fingerprints?
+## Should I confirm a key without manually comparing fingerprints?
 
-To certify someone's key, you should make sure that it's really that same key the other person wants you to certify with their name on it.
+To confirm someone's key, you should make sure that it's really that same key the other person wants you to confirm with their name on it.
 
 Since keys are usually obtained from a keyserver, it is necessary to double-check that the keyserver gave you the correct key.
 This is traditionally done by manually comparing the key's entire fingerprint, character by character.
 
 However, scanning a QR code, receiving a key via NFC, or exchanging keys via SafeSlinger all have that same check already built-in, so as long as you trust the method used for key exchange, there is no reason to check the fingerprint again manually.
 
-## Can I mark public keys as trusted without certifying them with my own key?
+## Can I mark other keys as trusted, without confirming them with my own key?
 
-No. You can, however, simply create a new key just for certification, which will essentially be the same thing.
-    
+This is not a supported use case. You can, however, simply create a new key which you use for this purpose only, which will essentially be the same thing.
+
 ## I see no suitable option in the app selection menu when trying to open a local file, what's wrong?
 
 You probably don't have any stand-alone file managers installed, like [OI File Manager](https://f-droid.org/repository/browse/?fdid=org.openintents.filemanager) or [Amaze](https://f-droid.org/repository/browse/?fdid=com.amaze.filemanager). OpenKeychain needs one in order to select files from local storage or SD card, such as for importing keys or encrypting/decrypting files.
@@ -65,16 +65,18 @@ You probably don't have any stand-alone file managers installed, like [OI File M
 
 ## Why is OpenKeychain's database not password protected?
 
-Your keys are already encrypted with their passphrase - that's the reason you have to input it for every crypto operation.
-There is no point in encrypting those keys again with another password, so password protecting the entire database would only protect the list of public keys.
+Your keys are already encrypted with their password - that's the reason you have to input it for every crypto operation.
+There is no point in encrypting those keys again with another password, so password protecting the entire database would only protect the list of keys which are not yours.
 If this is important to you, consider using [full disk encryption](https://source.android.com/devices/tech/security/encryption/).
 
-## Everyone can delete my keys. Why is there no passphrase request before?
-Anyone who can physically access your device can simply delete the app data from Android OS.
-Also, asking for a passphrase before delete would prevent you from deleting keys where you forgot your passphrase
+## Why is my password requested when I backup my keys?
 
-## Why is my passphrase requested when I backup my keys?
 It is not required cryptographically, but prevents simple stealing of your keys.
+
+## Everyone can delete my keys. Why is there no password request before?
+
+Anyone who can physically access your device can simply delete the app data from Android OS.
+Also, asking for a password before delete would prevent you from deleting keys where you forgot your password
 
 ## I have more than one subkey capable of singing. Which one is selected when signing with this OpenPGP key?
 
@@ -113,7 +115,7 @@ Head over to our [Wiki](https://github.com/open-keychain/open-keychain/wiki).
 
 # Known Issues
 
-### Importing secret key fails
+### Importing your own key from GnuPG fails
 
 Before posting a new bug report, please check if you are using gpg prior to 2.1.0 and changed the expiry date before exporting the secret key.
 
