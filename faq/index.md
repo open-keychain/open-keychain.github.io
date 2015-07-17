@@ -76,12 +76,6 @@ Also, asking for a passphrase before delete would prevent you from deleting keys
 ## Why is my passphrase requested when I backup my keys?
 It is not required cryptographically, but prevents simple stealing of your keys.
 
-## How can I specify connection port for Keyserver?
-
-Add a new Keyserver (or modify existing one) by going to Preferences -> General -> Keyservers. Enter the port number after the Keyserver address and preceded it by a colon.
-For example, "p80.pool.sks-keyservers.net:80" (without quotation marks) means that server "p80.pool.sks-keyservers.net" is working on a port 80.
-Default connection port is 11371 and it doesn't need to be specified.
-
 ## I have more than one subkey capable of singing. Which one is selected when signing with this OpenPGP key?
 
 OpenKeychain assumes that OpenPGP keys hold one usable signing subkey only and selects the first non-revoked non-expired non-stripped one it finds in the unordered list of subkeys.
