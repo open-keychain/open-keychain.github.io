@@ -101,7 +101,7 @@ You can now use your YubiKey with OpenKeychain and compatible [apps](http://www.
   2. Follow [https://developers.yubico.com/ykneo-openpgp/CardEdit.html](https://developers.yubico.com/ykneo-openpgp/CardEdit.html)
 
 ## How to import an existing key onto the YubiKey?
-Follow [https://developers.yubico.com/ykneo-openpgp/KeyImport.html](https://developers.yubico.com/ykneo-openpgp/KeyImport.html)
+Follow [https://developers.yubico.com/PGP/Importing\_keys.html](https://developers.yubico.com/PGP/Importing_keys.html)
 
 ## Advanced YubiKey Infos
   * [https://developers.yubico.com/ykneo-openpgp](https://developers.yubico.com/ykneo-openpgp)
