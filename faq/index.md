@@ -115,7 +115,7 @@ We don't know of other NFC-enabled security tokens that support OpenPGP out of t
   * [JavaCOS A22 dual interface Java card - 150K from smartcardfocus.us](http://www.smartcardfocus.us)
   * [J3A040 or J3A080 from smartcardsource.com](http://www.smartcardsource.com)
   * [J3A040 or J3A080 from motechno.com](http://www.motechno.com)
-  * [A40CR Card from javacardos.com](http://http://www.javacardos.com)
+  * [A40CR Card from javacardos.com](http://www.javacardos.com)
 
 ## Where can I find more information about OpenKeychain's security model and design decisions?
 
