@@ -13,7 +13,7 @@ If you find a bug or you need some feature, please create [an issue on our Githu
 
 ## Mailinglist
 
-You can find [our mailinglist at Google Groups](http://groups.google.com/d/forum/openpgp-keychain-dev).
+| [openkeychain@lists.riseup.net](mailto:openkeychain@lists.riseup.net) | [Subscribe](https://lists.riseup.net/www/subscribe/openkeychain) | [Archive](https://lists.riseup.net/www/arc/openkeychain) |
 
 ## IRC Channel
 
