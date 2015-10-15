@@ -43,7 +43,12 @@ To give you a (very!) rough impression, the password "J0hnnnyy1995" is about a t
  3. Transfer the key file to your mobile by whatever way is most convenient to you (Mail to yourself, PushBullet, Dropbox, ...)
  4. Import the key with OpenKeychain, then delete the file from your storage.
  5. **Change the password** to an easier one which is still safe, but more reasonable to type.
-    
+
+## How to import an OpenKeychain backup with gpg?
+ 1. Make a backup from OpenKeychain and transfer it to your computer via email or a cloud provider, like Dropbox. This is safe because OpenKeychain backups are encrypted with Advanced Encryption Standard (AES) using securely generated Backup Codes.
+ 2. On your PC, execute ``gpg --decrypt backup_2015-10-15.pub.pgp | gpg --import``.
+ 3. Enter the full Backup Code with uppercase letters and dashes, e.g., ``ABCDEF-GHIJKL-MNOPQRS-TUVWXY``.
+
 ## Should I confirm a key without manually comparing fingerprints?
 
 To confirm someone's key, you should make sure that it's really that same key the other person wants you to confirm with their name on it.
