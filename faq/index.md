@@ -47,7 +47,7 @@ To give you a (very!) rough impression, the password "J0hnnnyy1995" is about a t
 ## How to import an OpenKeychain backup with gpg?
  1. Make a backup from OpenKeychain and transfer it to your computer via email or a cloud provider, like Dropbox. This is safe because OpenKeychain backups are encrypted with Advanced Encryption Standard (AES) using securely generated Backup Codes.
  2. On your PC, execute ``gpg --decrypt backup_YYYY-MM-DD.pgp | gpg --import`` (replace ``backup_YYYY-MM-DD.pgp`` with your backup file)
- 3. Enter the full Backup Code with uppercase letters and dashes, e.g., ABCDEF-GHIJKL-MNOPQRS-TUVWXY
+ 3. Enter the full Backup Code with uppercase letters and dashes, e.g., "ABCDEF-GHIJKL-MNOPQR-STUVWX"
 
 ## Should I confirm a key without manually comparing fingerprints?
 
