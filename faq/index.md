@@ -88,30 +88,13 @@ Also, asking for a password before delete would prevent you from deleting keys w
 OpenKeychain assumes that OpenPGP keys hold one usable signing subkey only and selects the first non-revoked non-expired non-stripped one it finds in the unordered list of subkeys.
 We consider having more than one valid signing subkey an advanced usecase. You can either strip subkeys that should not be used using OpenKeychain's edit key screen or explicitly select the right subkeys when exporting from gpg with ``gpg --export-secret-subkeys``.
 
-## How to prepare a YubiKey NEO for OpenKeychain?
-
-  1. [Buy a YubiKey NEO](http://www.yubico.com/support/resellers/)
-  2. [Prepare it for usage with OpenPGP using GnuPG and Yubico's tools](http://www.yubico.com/2012/12/yubikey-neo-openpgp/).
-  3. Export the keypair from GnuPG with
-     ```
-     gpg -a --output gpg-secret-key.asc --export-secret-keys <insert key id or name>
-     ```
-     and transfer the file to your Android device.
-  4. In OpenKeychain, select "Import from file", select the file and import the keypair. It will be automatically detect that this is a keypair that works with a YubiKey only.
-
-You can now use your YubiKey with OpenKeychain and compatible [apps](http://www.openkeychain.org/apps/). A screen will appear when you need to hold your YubiKey against the NFC antenna.
-
-## How to use a different YubiKey PIN?
-  1. Deselect "Use default YubiKey PIN" in OpenKeychain's advanced settings screen
-  2. Follow [https://developers.yubico.com/ykneo-openpgp/CardEdit.html](https://developers.yubico.com/ykneo-openpgp/CardEdit.html)
-
-## How to import an existing key onto the YubiKey?
+## How to import an existing key onto the YubiKey NEO?
 Follow [https://developers.yubico.com/PGP/Importing\_keys.html](https://developers.yubico.com/PGP/Importing_keys.html)
 
-## Advanced YubiKey Infos
+## Advanced YubiKey NEO Information
   * [https://developers.yubico.com/ykneo-openpgp](https://developers.yubico.com/ykneo-openpgp)
   * [https://github.com/Yubico/ykneo-openpgp](https://github.com/Yubico/ykneo-openpgp)
-  
+
 ## Are there other compatible security tokens besides the YubiKey NEO that are supported?
 Yes, there is [SIGILANCE](https://www.sigilance.com/).
 
