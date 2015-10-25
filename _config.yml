@@ -2,7 +2,8 @@ markdown: redcarpet
 highlighter: pygments
 permalink: /:title
 
-url: http://www.openkeychain.org
+url: https://www.openkeychain.org
+enforce_ssl: www.openkeychain.org   # without any protocol
 baseurl: 
 
 redcarpet:
