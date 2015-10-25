@@ -17,7 +17,7 @@ OpenKeychain integrates with
 
   * K-9 Mail
   * Conversations
-  * [and many more…](http://www.openkeychain.org/apps/)
+  * [and many more…](https://www.openkeychain.org/apps/)
 
 OpenKeychain is designed to be trustworthy. It’s Free Software with no secrets; anyone can examine and validate every bit of it.
 

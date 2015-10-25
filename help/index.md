@@ -29,4 +29,4 @@ Currently, these versions are distributed via Google Play only:
 
 # Export Regulations
 We are required to comply with U.S. export regulations due to the distributon of our apps on Google Play.
-See [Export Regulations](http://www.openkeychain.org/help/export-regulations) for more information.
+See [Export Regulations](https://www.openkeychain.org/help/export-regulations) for more information.
