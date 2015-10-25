@@ -31,5 +31,18 @@
         $("article").fitVids();
       });
     </script>
+
+    <script src="{{site.baseurl}}/cointipper/dist/js/jquery.cointipper-pack.min.js"></script>
+    <script>
+        $(function() {
+            $('#donate-bitcoin').coinTipper({
+                type: 'tip',
+                currency: 'bitcoin',
+                iso: 'BTC',
+                address: '1JZfAKTbTU5LJTkDELhPUF4Xa6VstEZgz6',
+                label: 'OpenKeychain Donation'
+            });
+        });
+    </script>
   </body>
 </html>
