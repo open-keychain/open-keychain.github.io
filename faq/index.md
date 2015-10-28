@@ -96,9 +96,10 @@ Follow [https://developers.yubico.com/PGP/Importing\_keys.html](https://develope
   * [https://github.com/Yubico/ykneo-openpgp](https://github.com/Yubico/ykneo-openpgp)
 
 ## Are there other compatible security tokens besides the YubiKey NEO that are supported?
-Yes, there is [SIGILANCE](https://www.sigilance.com/).
+  * [SIGILANCE](https://www.sigilance.com/) supports OpenKeychain out of the box
+  * [Fidesmo](http://fidesmo.com/) supports OpenKeychain, if the *Fidesmo PGP* card app is installed
 
-We don't know of other NFC-enabled security tokens that support OpenPGP out of the box. You can however buy one of the following products and install [ykneo-openpgp](https://github.com/Yubico/ykneo-openpgp) by yourself. We wouldn't encourage you to do this as it requires to install special tools.
+Besides those, we don't know of other NFC-enabled security tokens that support OpenPGP out of the box. You can however buy one of the following products and install [ykneo-openpgp](https://github.com/Yubico/ykneo-openpgp) by yourself. We wouldn't encourage you to do this as it requires to install special tools.
 
   * [J3D081, JCOP v2.4.2 Card from cryptoshop.com](http://www.cryptoshop.com) (TESTED, works with ykneo-openpgp applet)
   * [JavaCOS A22 dual interface Java card - 150K from smartcardfocus.us](http://www.smartcardfocus.us)
