@@ -67,7 +67,7 @@ As a side note: openkeychain.org is now available over TLS exclusively, addition
 ## Install OpenKeychain
 OpenKeychain is available on Google Play and F-Droid.
 
-<div>
+<div style="border:0px;clear:both;padding:0px;margin:0px;overflow:hidden;">
 <p style="float: left;"><a href="https://f-droid.org/app/org.sufficientlysecure.keychain"><img src="{{ site.url }}/public/images/fdroid.png" /></a>
 <a href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain"><img src="{{ site.url }}/public/images/google_play.png" /></a></p>
 </div>
