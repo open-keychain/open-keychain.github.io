@@ -72,4 +72,4 @@ OpenKeychain is available on Google Play and F-Droid.
 <a href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain"><img src="{{ site.url }}/public/images/google_play.png" /></a></p>
 </div>
 
-\- Dominik
+\- Dominik Schürmann
