@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OpenKeychain 3.6 Security Audit and Tons of New Features
+title: "OpenKeychain 3.6: Security Audit and Tons of New Features"
 ---
 
 ## Security Audit
