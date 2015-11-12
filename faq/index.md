@@ -24,13 +24,17 @@ If your security requirements are high enough that you don't keep your keys on y
 Otherwise, they should be fine.
 
 ## How to import an OpenKeychain backup with gpg?
- 1. Make a backup from OpenKeychain and transfer it to your computer via email or a cloud provider, like Dropbox. This is safe because OpenKeychain backups are encrypted with Advanced Encryption Standard (AES) using securely generated Backup Codes.
+ 1. Make a backup from OpenKeychain and transfer it to your computer via email
+    or a cloud provider, like Dropbox. This is safe because OpenKeychain
+    backups are encrypted with Advanced Encryption Standard (AES) using
+    securely generated Backup Codes.
  2. On your PC, execute ``gpg --decrypt backup_YYYY-MM-DD.pgp | gpg --import`` (replace ``backup_YYYY-MM-DD.pgp`` with your backup file)
  3. Enter the full Backup Code with uppercase letters and dashes, e.g., "ABCDEF-GHIJKL-MNOPQR-STUVWX"
 
 ## What is the best way to transfer my own key to OpenKeychain?
 
 Short answer:
+
 ```
 # generate a strong random password
 gpg --armor --gen-random 1 20
@@ -41,29 +45,15 @@ gpg --armor --export-secret-keys YOUREMAILADDRESS | gpg --armor --symmetric --ou
 
 Longer answer:
 
-You should make sure that your key can't be intercepted during transfer.  If
-you have an SD-Card reader in your phone, you can use this to easily transfer
-your key.  If you don't, you can transfer your key through an online service
-(such as E-Mail, Dropbox, …), but **make sure to encrypt it** during transfer!
+You should make sure that your key can't be intercepted during transfer.  If you have an SD-Card reader in your phone, you can use this to easily transfer your key.  If you don't, you can transfer your key through an online service (such as E-Mail, Dropbox, …), but **make sure to encrypt it** during transfer!
 
-To transfer your key to OpenKeychain from `gpg`, the best way to do so is to
-encrypt it with a single-use password, which you never use anywhere else and
-never send online. Use `gpg` as shown above to generate a random password, then
-export encrypt your key.
+To transfer your key to OpenKeychain from `gpg`, the best way to do so is to encrypt it with a single-use password, which you never use anywhere else and never send online. Use `gpg` as shown above to generate a random password, then export encrypt your key.
 
-You will be asked for a password. Once the key is encrypted, transfer the file
-to your mobile using any method, decrypt the file with OpenKeychain. When
-asked, manually (!) input the password.
+You will be asked for a password. Once the key is encrypted, transfer the file to your mobile using any method, decrypt the file with OpenKeychain. When asked, manually (!) input the password.  
 
-**Do not use a weak password**! This method is only safe if the password you
-use is very strong (like 20 random, alphanumeric characters), and humans are
-really bad at generating random strings.  Use `gpg` as shown above, or another
-random password generator of your choice.
+**Do not use a weak password**! This method is only safe if the password you use is very strong (like 20 random, alphanumeric characters), and humans are really bad at generating random strings.  Use `gpg` as shown above, or another random password generator of your choice.
 
-**Do not use an online password generator**! This beats the purpose of using a
-generated password in the first place! An attacker who can get the file from
-your Dropbox account, can likely also see the Website you got the password
-from!
+**Do not use an online password generator**! This beats the purpose of using a generated password in the first place! An attacker who can get the file from your Dropbox account, can likely also see the Website you got the password from!
 
 
 ## Should I confirm a key without manually comparing fingerprints?
