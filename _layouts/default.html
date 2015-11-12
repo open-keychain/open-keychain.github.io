@@ -17,9 +17,9 @@
       {{ content }}
 
       <footer>
-        <!--<p>
-          This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/deed.en_US">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
-        </p>-->
+        <p>
+          <a href="/about/imprint">Imprint</a>
+        </p>
       </footer>
     </div>
 
@@ -30,6 +30,19 @@
       $(document).ready(function(){
         $("article").fitVids();
       });
+    </script>
+
+    <script src="{{site.baseurl}}/cointipper/dist/js/jquery.cointipper-pack.js"></script>
+    <script>
+        $(function() {
+            $('#donate-bitcoin').coinTipper({
+                type: 'tip',
+                currency: 'bitcoin',
+                iso: 'BTC',
+                address: '1JZfAKTbTU5LJTkDELhPUF4Xa6VstEZgz6',
+                label: 'OpenKeychain'
+            });
+        });
     </script>
   </body>
 </html>

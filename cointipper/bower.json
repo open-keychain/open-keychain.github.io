@@ -1,0 +1,7 @@
+{
+  "name": "cointipper",
+  "devDependencies": {
+    "bootstrap": "~3",
+    "jquery-qrcode": "https://github.com/jeromeetienne/jquery-qrcode.git#68587992781d0cec9f8fc4a20785eba0ea2fb7f4"
+  }
+}

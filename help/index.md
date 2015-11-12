@@ -13,7 +13,7 @@ If you find a bug or you need some feature, please create [an issue on our Githu
 
 ## Mailinglist
 
-You can find [our mailinglist at Google Groups](http://groups.google.com/d/forum/openpgp-keychain-dev).
+| [openkeychain@lists.riseup.net](mailto:openkeychain@lists.riseup.net) | [Subscribe](https://lists.riseup.net/www/subscribe/openkeychain) | [Archive](https://lists.riseup.net/www/arc/openkeychain) |
 
 ## IRC Channel
 
@@ -24,9 +24,9 @@ Our IRC Channel can be found on [Freenode](https://freenode.net): ``#openkeychai
 We are glad you want to test Beta versions of OpenKeychain and report early bugs.
 Currently, these versions are distributed via Google Play only:
 
- 1. Join the [OpenKeychain Google+ group](https://plus.google.com/u/0/communities/100667924987940385351)
- 2. Visit this [special Google Play link and apply as a beta tester](https://play.google.com/apps/testing/org.sufficientlysecure.keychain)
+ 1. Become a beta tester with this special [Google Play link](https://play.google.com/apps/testing/org.sufficientlysecure.keychain).
+ 2. Update OpenKeychain on your device
 
 # Export Regulations
 We are required to comply with U.S. export regulations due to the distributon of our apps on Google Play.
-See [Export Regulations](http://www.openkeychain.org/help/export-regulations) for more information.
+See [Export Regulations](https://www.openkeychain.org/help/export-regulations) for more information.

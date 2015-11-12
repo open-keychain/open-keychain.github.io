@@ -1,0 +1,35 @@
+/* DEMO CSS */
+
+@import "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css";
+
+.main code {
+	background-color: #F7F7F9;
+	border: 1px solid #E1E1E8;
+}
+.main h1 {
+	font-family: monospace;
+}
+.main h1 small {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.main .donate-btn a {
+	color: #fff;
+}
+.main a {
+	color: #333;
+}
+.footer {
+	clear: both;
+	margin-top: 30px;
+	font-size: 12px;
+	color: #bbb;
+}
+.footer a {
+	color: #bbb;
+	text-decoration: none;
+}
+@media (max-width: 767px) {
+	.main h1 {
+		font-size: 23px;
+	}
+}

@@ -23,6 +23,11 @@ In conclusion, we believe that secret keys are not notably less safe on your mob
 If your security requirements are high enough that you don't keep your keys on your laptop, you probably shouldn't put them on your mobile either.
 Otherwise, they should be fine.
 
+## How to import an OpenKeychain backup with gpg?
+ 1. Make a backup from OpenKeychain and transfer it to your computer via email or a cloud provider, like Dropbox. This is safe because OpenKeychain backups are encrypted with Advanced Encryption Standard (AES) using securely generated Backup Codes.
+ 2. On your PC, execute ``gpg --decrypt backup_YYYY-MM-DD.pgp | gpg --import`` (replace ``backup_YYYY-MM-DD.pgp`` with your backup file)
+ 3. Enter the full Backup Code with uppercase letters and dashes, e.g., "ABCDEF-GHIJKL-MNOPQR-STUVWX"
+
 ## What is the best way to transfer my own key to OpenKeychain?
 
 Short answer:
@@ -59,6 +64,7 @@ random password generator of your choice.
 generated password in the first place! An attacker who can get the file from
 your Dropbox account, can likely also see the Website you got the password
 from!
+
 
 ## Should I confirm a key without manually comparing fingerprints?
 
@@ -99,29 +105,24 @@ Also, asking for a password before delete would prevent you from deleting keys w
 OpenKeychain assumes that OpenPGP keys hold one usable signing subkey only and selects the first non-revoked non-expired non-stripped one it finds in the unordered list of subkeys.
 We consider having more than one valid signing subkey an advanced usecase. You can either strip subkeys that should not be used using OpenKeychain's edit key screen or explicitly select the right subkeys when exporting from gpg with ``gpg --export-secret-subkeys``.
 
-## How to prepare a YubiKey NEO for OpenKeychain?
-
-  1. [Buy a YubiKey NEO](http://www.yubico.com/support/resellers/)
-  2. [Prepare it for usage with OpenPGP using GnuPG and Yubico's tools](http://www.yubico.com/2012/12/yubikey-neo-openpgp/).
-  3. Export the keypair from GnuPG with
-     ```
-     gpg -a --output gpg-secret-key.asc --export-secret-keys <insert key id or name>
-     ```
-     and transfer the file to your Android device.
-  4. In OpenKeychain, select "Import from file", select the file and import the keypair. It will be automatically detect that this is a keypair that works with a YubiKey only.
-
-You can now use your YubiKey with OpenKeychain and compatible [apps](http://www.openkeychain.org/apps/). A screen will appear when you need to hold your YubiKey against the NFC antenna.
-
-## How to use a different YubiKey PIN?
-  1. Deselect "Use default YubiKey PIN" in OpenKeychain's advanced settings screen
-  2. Follow [https://developers.yubico.com/ykneo-openpgp/CardEdit.html](https://developers.yubico.com/ykneo-openpgp/CardEdit.html)
-
-## How to import an existing key onto the YubiKey?
+## How to import an existing key onto the YubiKey NEO?
 Follow [https://developers.yubico.com/PGP/Importing\_keys.html](https://developers.yubico.com/PGP/Importing_keys.html)
 
-## Advanced YubiKey Infos
+## Advanced YubiKey NEO Information
   * [https://developers.yubico.com/ykneo-openpgp](https://developers.yubico.com/ykneo-openpgp)
   * [https://github.com/Yubico/ykneo-openpgp](https://github.com/Yubico/ykneo-openpgp)
+
+## Are there other compatible security tokens besides the YubiKey NEO that are supported?
+  * [SIGILANCE](https://www.sigilance.com/) supports OpenKeychain out of the box
+  * [Fidesmo](http://fidesmo.com/) supports OpenKeychain by installing the *Fidesmo PGP* card app
+
+Besides those, we don't know of other NFC-enabled security tokens that support OpenPGP out of the box. You can however buy one of the following products and install [ykneo-openpgp](https://github.com/Yubico/ykneo-openpgp) by yourself. We wouldn't encourage you to do this as it requires to install special tools.
+
+  * [J3D081, JCOP v2.4.2 Card from cryptoshop.com](http://www.cryptoshop.com) (TESTED, works with ykneo-openpgp applet)
+  * [JavaCOS A22 dual interface Java card - 150K from smartcardfocus.us](http://www.smartcardfocus.us)
+  * [J3A040 or J3A080 from smartcardsource.com](http://www.smartcardsource.com)
+  * [J3A040 or J3A080 from motechno.com](http://www.motechno.com)
+  * [A40CR from javacardos.com](http://www.javacardos.com) (NOT WORKING PROPERLY; Messaging support needs to be stripped from ykneo-openpgp, even then signing is broken)
 
 ## Where can I find more information about OpenKeychain's security model and design decisions?
 

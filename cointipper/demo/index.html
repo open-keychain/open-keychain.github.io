@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>CoinTipper</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="demo.css">
+	<link rel="stylesheet" href="../dist/css/jquery.cointipper.min.css">
+</head>
+<body>
+	<div class="container main">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="page-header" style="text-align: center;">
+					<h1>jQuery.CoinTipper(); <br><small>a jQuery donate button</small></h1>
+					<small><a href="https://github.com/jeremymouton/cointipper">View on Github</a></small>
+				</div>
+
+				<br>
+				<div style="text-align: center;">
+					<h3>Demo</h3>
+					<span id="donate-bitcoin" class="donate-btn"></span>
+					<span id="donate-dogecoin" class="donate-btn"></span>
+					<span id="donate-kittehcoin" class="donate-btn"></span>
+					<span id="donate-mycoin" class="donate-btn"></span>
+				</div>
+ 
+				<br>
+ 
+				<hr>
+ 
+				<div style="text-align: center;">
+					<br>
+					<h3>Hosted version</h3>
+ 
+					<p>The hosted version let's you use an embed code for easier integration.</p>
+ 
+					<embed src="https://cointipper.herokuapp.com/tip/bitcoin/BTC/1GMwCf6XsMufpot3wHzbYnU3d2RevD5/CoinTipper-Donation-Jar" height="38" width="150"> <embed src="https://cointipper.herokuapp.com/donate/dogecoin/DOGE/DAxYkK3nGQPasscKYmbMswQJoV3h8y4aEW/CoinTipper-Donation-Jar" height="38" width="150"> <embed src="https://cointipper.herokuapp.com/donate/kittehcoin/MEOW/KTxtYiB28YV5pBgy5GRwdFqWDx9RERVRNv/CoinTipper" height="38" width="150">
+
+						<br>
+						<br>
+
+<pre>
+cointipper.herokuapp.com then /type/currency/ISO/address/label-with-spaces
+</pre>
+
+<i>Copy/paste and replace with your own</i>
+<pre>
+&lt;embed src="https://cointipper.herokuapp.com/tip/bitcoin/BTC/1GMwCf6XsMufpot3wHzbYnU3d2RevD5/CoinTipper-Donation-Jar" height="38" width="150">
+</pre>
+					<br>
+					<p>More info on: <a href="https://github.com/jeremymouton/cointipper-server">https://github.com/jeremymouton/cointipper-server</a>.</p>
+				
+					<br>
+				</div>
+
+				<hr>
+
+				<h2>Setup</h2>
+				<p>Include <code><a href="http://jquery.com/download/">jQuery</a></code> and <code><a href="dist/jquery.cointipper-pack.min.js">jquery.cointipper.js</a></code> before the closing <code>&lt;/body></code> tag.</p>
+
+				<p>Include <code><a href="dist/cointipper.min.css">cointipper.css</a></code> inside the <code>&lt;head></code> tag.</p>
+
+				<hr>
+
+				<p>Create an HTML tag for the button:</p>
+<pre>
+&lt;span id="donate-bitcoin">&lt;/span>
+</pre>
+
+				<hr>
+
+				<p>Select your target (<code>#donate-bitcoin</code> in the previous example), call <code>.coinTipper()</code> and give it some options.</p>
+<pre>
+&lt;script>
+  $(function() {
+    $('#donate-bitcoin').coinTipper({
+      type: 'tip', // tip, donate
+      currency: 'bitcoin',
+      iso: 'BTC',
+      address: '1G967MwCf6XsMufpot3wHzbYnU3d2RevD5',
+      label: 'CoinTipper Tip Jar'
+    });
+  });
+&lt;/script>
+</pre>
+				</p>
+
+				<hr>
+
+				<p>Supports any coin, just provide the name and its 3-4 letter ISO along with an address.</p>
+
+				<hr>
+
+				<div class="footer">
+					<p>CoinTipper by <a href="https://github.com/jeremymouton">@jeremymouton</a></p>
+				</div>
+			</div>
+		</div>
+	</div><!-- /main -->
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script src="../dist/js/jquery.cointipper-pack.min.js"></script>
+
+	<script>
+		$(function() {
+			$('#donate-bitcoin').coinTipper({
+				type: 'tip',
+				currency: 'bitcoin',
+				iso: 'BTC',
+				address: '1G967MwCf6XsMufpot3wHzbYnU3d2RevD5',
+				label: 'CoinTipper Tip Jar'
+			});
+
+			$('#donate-dogecoin').coinTipper({
+				type: 'tip',
+				currency: 'dogecoin',
+				iso: 'DOGE',
+				address: 'DAxYkK3nGQPasscKYmbMswQJoV3h8y4aEW',
+				label: 'CoinTipper Tip Jar'
+			});
+
+			$('#donate-kittehcoin').coinTipper({
+				type: 'donate',
+				currency: 'kittehcoin',
+				iso: 'MEOW',
+				address: 'KTxtYiB28YV5pBgy5GRwdFqWDx9RERVRNv',
+				label: 'CoinTipper Tip Jar'
+			});
+
+			$('#donate-mycoin').coinTipper({
+				type: 'donate',
+				currency: 'mycoin',
+				iso: 'MYC',
+				address: 'MYCRwdFqWiB28YV5pBgyRE09NGRwdFqWDxv',
+				label: 'CoinTipper Tip Jar'
+			});
+		});
+	</script>
+</body>
+</html>
