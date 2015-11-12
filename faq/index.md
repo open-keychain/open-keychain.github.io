@@ -51,9 +51,9 @@ To transfer your key to OpenKeychain from `gpg`, the best way to do so is to enc
 
 Once the key is encrypted, transfer the file to your mobile using any method, decrypt the file with OpenKeychain. When asked, manually (!) input the password.
 
-**Do not use a weak password**! This method is only safe if the password you use is very strong (like 20 random, alphanumeric characters), and humans are really bad at generating random strings.  Use `gpg` as shown above, or another random password generator of your choice.
+**Do not use a weak password!** This method is only safe if the password you use is very strong (like 20 random, alphanumeric characters), and humans are really bad at generating random strings.  Use `gpg` as shown above, or another random password generator of your choice.
 
-**Do not use an online password generator**! This beats the purpose of using a generated password in the first place! An attacker who can get the file from your Dropbox account, can likely also see the Website you got the password from!
+**Do not use an online password generator!** This beats the purpose of using a generated password in the first place! An attacker who can get the file from your Dropbox account, can likely also see the Website you got the password from!
 
 
 ## Should I confirm a key without manually comparing fingerprints?
