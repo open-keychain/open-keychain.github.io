@@ -25,25 +25,41 @@ Otherwise, they should be fine.
 
 ## What is the best way to transfer my own key to OpenKeychain?
 
-Ideally, put the key on an sd card, import, then erase from the sd card.
-If your mobile does not have an sd card reader, read on.
+Short answer:
+```
+# generate a strong random password
+gpg --armor --gen-random 1 20
 
-Our recommended method is to transfer the exported key "through the cloud", but with a super-safe password which is only used during the transfer.
-Your key is **encrypted with its password**, the only visible data in the exported file is the public part which is uploaded to keyservers.
+# encrypt key, use password above when asked
+gpg --armor --export-secret-keys YOUREMAILADDRESS | gpg --armor --symmetric --output mykey.sec.asc
+```
 
-So is this really safe? The answer is: Yes, IF you use a good password.
-If your password is as difficult to guess as your key, an attacker will gain no useful information from your exported key file.
-To give you a (very!) rough impression, the password "J0hnnnyy1995" is about a third as difficult to guess as a 2048 bit RSA key, while "%aBbaf11!o9$pP2,o9/=" is about the same.
+Longer answer:
 
- 1. Make up a long and complex password to use during the transfer.
-    It should be at least 20 characters (more is better, although more than 50 is overkill), with varying capitalization, many special characters and *no words from the dictionary*.
-    Yes, it is annoying to type, but you'll only use it once!
-    You can also write it down, but make sure to destroy the note afterwards, and make sure it is never transferred over the internet!
- 2. Change the password of your key to that one, then export
- 3. Transfer the key file to your mobile by whatever way is most convenient to you (Mail to yourself, PushBullet, Dropbox, ...)
- 4. Import the key with OpenKeychain, then delete the file from your storage.
- 5. **Change the password** to an easier one which is still safe, but more reasonable to type.
-    
+You should make sure that your key can't be intercepted during transfer.  If
+you have an SD-Card reader in your phone, you can use this to easily transfer
+your key.  If you don't, you can transfer your key through an online service
+(such as E-Mail, Dropbox, …), but **make sure to encrypt it** during transfer!
+
+To transfer your key to OpenKeychain from `gpg`, the best way to do so is to
+encrypt it with a single-use password, which you never use anywhere else and
+never send online. Use `gpg` as shown above to generate a random password, then
+export encrypt your key.
+
+You will be asked for a password. Once the key is encrypted, transfer the file
+to your mobile using any method, decrypt the file with OpenKeychain. When
+asked, manually (!) input the password.
+
+**Do not use a weak password**! This method is only safe if the password you
+use is very strong (like 20 random, alphanumeric characters), and humans are
+really bad at generating random strings.  Use `gpg` as shown above, or another
+random password generator of your choice.
+
+**Do not use an online password generator**! This beats the purpose of using a
+generated password in the first place! An attacker who can get the file from
+your Dropbox account, can likely also see the Website you got the password
+from!
+
 ## Should I confirm a key without manually comparing fingerprints?
 
 To confirm someone's key, you should make sure that it's really that same key the other person wants you to confirm with their name on it.
