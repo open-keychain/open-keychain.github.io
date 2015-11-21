@@ -8,7 +8,7 @@ title: Contribute
 <img style="float: right" src="{{ site.url }}/public/images/github.png" />
 
 OpenKeychain is developed in an open way by many contributors in their free time.
-We appreciate all contribtions and provide feedback for all incoming pull requests which can clearly be seen by the ratio of [opened vs. closed pull requests](https://github.com/open-keychain/open-keychain/pulls).
+We appreciate all contributions and provide feedback for all incoming pull requests which can clearly be seen by the ratio of [opened vs. closed pull requests](https://github.com/open-keychain/open-keychain/pulls).
 So, if you want to start hacking, read our [5 points guide on Github](https://github.com/open-keychain/open-keychain#how-to-help-the-project) and fork OpenKeychain!
 
 ## Translations
@@ -22,7 +22,7 @@ We collect some helpful information regarding the language and usage of Transife
 
 ## Website
 
-This website is also hosted as a git repository, so if you find spelling/grammer mistakes or want to add more content, you are very welcome to do so by submitting a pull request for the [open-keychain.github.io repository](https://github.com/open-keychain/open-keychain.github.io).
+This website is also hosted as a git repository, so if you find spelling/grammar mistakes or want to add more content, you are very welcome to do so by submitting a pull request for the [open-keychain.github.io repository](https://github.com/open-keychain/open-keychain.github.io).
 
 ## API
 
