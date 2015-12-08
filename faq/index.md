@@ -4,9 +4,9 @@ title: FAQ
 ---
 [//]: # (NOTE: Please put every sentence in its own line, Transifex puts every line in its own translation field!)
 
-# Frequently Asked Questions
-
 <div id="toc"></div>
+
+# Frequently Asked Questions
 
 ## Are my secret keys safe on my mobile device?
 
