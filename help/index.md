@@ -11,9 +11,12 @@ title: Help
 
 If you find a bug or you need some feature, please create [an issue on our Github-page](https://github.com/open-keychain/open-keychain/issues).
 
-## Mailinglist
+## Mailinglist/Forum
 
-| [openkeychain@lists.riseup.net](mailto:openkeychain@lists.riseup.net) | [Subscribe](https://lists.riseup.net/www/subscribe/openkeychain) | [Archive](https://lists.riseup.net/www/arc/openkeychain) |
+If you have questions or problems, our mailinglist is the right place to discuss.
+It is also available as a web forum.
+
+| [Web forum](https://lists.riseup.net/www/arc/openkeychain) | [openkeychain@lists.riseup.net](mailto:openkeychain@lists.riseup.net) | [Subscribe](https://lists.riseup.net/www/subscribe/openkeychain) |
 
 ## IRC Channel
 
