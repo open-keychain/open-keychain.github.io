@@ -15,12 +15,6 @@ If you find a bug or you need some feature, please create [an issue on our Githu
 
 | [openkeychain@lists.riseup.net](mailto:openkeychain@lists.riseup.net) | [Subscribe](https://lists.riseup.net/www/subscribe/openkeychain) | [Archive](https://lists.riseup.net/www/arc/openkeychain) |
 
-## Security Contact
-
-If you found vulnerabilities in OpenKeychain, please contact ``security@openkeychain.org`` using the [corresponding OpenPGP key](https://hkps.pool.sks-keyservers.net/pks/lookup?op=get&search=0x3298cdc6b47e1a51e969e2b1c61a2c0f7b7e0783).
-We pay 0.2 Bitcoins for responsibly disclosed vulnerabilities that have been validated by us.
-See [cure53 security audit](https://github.com/open-keychain/open-keychain/wiki/cure53-Security-Audit-2015) for valid examples.
-
 ## IRC Channel
 
 Our IRC Channel can be found on [Freenode](https://freenode.net): ``#openkeychain``
@@ -32,6 +26,12 @@ Currently, these versions are distributed via Google Play only:
 
  1. Become a beta tester with this special [Google Play link](https://play.google.com/apps/testing/org.sufficientlysecure.keychain).
  2. Update OpenKeychain on your device
+
+## Security Contact
+
+If you found vulnerabilities in OpenKeychain, please contact ``security@openkeychain.org`` using the [corresponding OpenPGP key](https://hkps.pool.sks-keyservers.net/pks/lookup?op=get&search=0x3298cdc6b47e1a51e969e2b1c61a2c0f7b7e0783).
+We pay 0.2 Bitcoins for responsibly disclosed vulnerabilities that have been validated by us.
+See [cure53 security audit](https://github.com/open-keychain/open-keychain/wiki/cure53-Security-Audit-2015) for valid examples.
 
 # Export Regulations
 We are required to comply with U.S. export regulations due to the distributon of our apps on Google Play.
