@@ -6,6 +6,8 @@ title: FAQ
 
 # Frequently Asked Questions
 
+<div id="toc"></div>
+
 ## Are my secret keys safe on my mobile device?
 
 This is a very common question, and it's not an easy one. In the end it comes down to how much you trust your mobile device.
