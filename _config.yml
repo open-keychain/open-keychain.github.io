@@ -6,7 +6,7 @@ url: https://www.openkeychain.org
 baseurl: 
 
 redcarpet:
-  extensions: [strikethrough, tables]
+  extensions: [strikethrough, tables, with_toc_data]
 
 sass:
   sass_dir: public/css
