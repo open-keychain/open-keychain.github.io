@@ -19,7 +19,7 @@ If you find a bug or you need some feature, please create [an issue on our Githu
 
 If you found vulnerabilities in OpenKeychain, please contact ``security@openkeychain.org`` using the [corresponding OpenPGP key](https://hkps.pool.sks-keyservers.net/pks/lookup?op=get&search=0x3298cdc6b47e1a51e969e2b1c61a2c0f7b7e0783).
 We pay 0.2 Bitcoins for responsibly disclosed vulnerabilities that have been validated by us.
-See [cure53 securit audit](https://github.com/open-keychain/open-keychain/wiki/cure53-Security-Audit-2015) for valid examples.
+See [cure53 security audit](https://github.com/open-keychain/open-keychain/wiki/cure53-Security-Audit-2015) for valid examples.
 
 ## IRC Channel
 
