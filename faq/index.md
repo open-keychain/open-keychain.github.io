@@ -120,6 +120,14 @@ Besides those, we don't know of other NFC-enabled security tokens that support O
 
 Head over to our [Wiki](https://github.com/open-keychain/open-keychain/wiki).
 
+## What is the relationship between APG and OpenKeychain?
+
+OpenKeychain has been created as a [fork of APG in March 2012](https://github.com/open-keychain/open-keychain/tree/a942c4a507a0df871c43d69076689ad1dd659e10).
+Between December 2010 and October 2013 no new [version of APG](http://www.thialfihar.org/projects/apg/) was released, which has been [viewed critically by the community](https://github.com/nylira/prism-break/issues/537).
+Thus, OpenKeychain has been started with the intention of picking up the development and improve the user interface and API and a first version 2.0 has been released in January, 2013.
+After three years without updates, APG merged back security fixes from OpenKeychain and some month later rebased an entire [new version on OpenKeychain's source code](http://www.thialfihar.org/projects/apg/).
+However, this process stopped in March 2014, while we continue to release regularly new versions of OpenKeychain.
+We can no longer recommend the usage of APG because [recent security fixes](https://github.com/open-keychain/open-keychain/wiki/cure53-Security-Audit-2015) have not been merged back.
 
 
 # Known Issues
