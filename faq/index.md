@@ -124,7 +124,7 @@ Head over to our [Wiki](https://github.com/open-keychain/open-keychain/wiki).
 
 # Known Issues
 
-### Importing your own key from GnuPG fails
+## Importing your own key from GnuPG fails
 
 Before posting a new bug report, please check if you are using gpg prior to 2.1.0 and changed the expiry date before exporting the secret key.
 
@@ -139,7 +139,7 @@ Another [bug report](https://bugs.g10code.com/gnupg/issue1817) has been opened t
 
 Unfortunately, this is a bug in the SKS Keyserver software. Its machine-readable output returns the user ids in an arbitrary order. Read the [related bug](https://bitbucket.org/skskeyserver/sks-keyserver/issue/28/primary-uid-in-machine-readable-index) report for more information.
 
-### Not working with AOSP Mail
+## Not working with AOSP Mail
 
 For now, OpenKeychain will not support AOSP Mail due to bugs in AOSP were we cannot work around ([#290](https://github.com/open-keychain/open-keychain/issues/290)).
 
