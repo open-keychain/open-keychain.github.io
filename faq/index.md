@@ -123,11 +123,13 @@ Head over to our [Wiki](https://github.com/open-keychain/open-keychain/wiki).
 ## What is the relationship between APG and OpenKeychain?
 
 OpenKeychain has been created as a [fork of APG in March 2012](https://github.com/open-keychain/open-keychain/tree/a942c4a507a0df871c43d69076689ad1dd659e10).
-Between December 2010 and October 2013 no new [version of APG](http://www.thialfihar.org/projects/apg/) was released, which has been [viewed critically by the community](https://github.com/nylira/prism-break/issues/537).
-Thus, OpenKeychain has been started with the intention of picking up the development and improve the user interface and API and a first version 2.0 has been released in January 2013.
-After three years without updates, APG merged back security fixes from OpenKeychain and some month later rebased an entire [new version on OpenKeychain's source code](http://www.thialfihar.org/projects/apg/).
+Between December 2010 and October 2013 no new [version of APG](http://www.thialfihar.org/projects/apg/) was released, which was seen as a problem by the community.
+Thus, we started OpenKeychain with the intention of picking up the development to improve the user interface and API.
+A first version 2.0 has been released in January 2013.
+After three years without updates, APG merged back security fixes from OpenKeychain and some months later rebased an entire [new version on OpenKeychain's source code](http://www.thialfihar.org/projects/apg/).
 However, this process stopped in March 2014, while we continue to release regularly new versions of OpenKeychain.
-We can no longer recommend the usage of APG because [recent security fixes](https://github.com/open-keychain/open-keychain/wiki/cure53-Security-Audit-2015) have not been merged back.
+At time of writing (2015-12-09), a number of [security fixes](https://github.com/open-keychain/open-keychain/wiki/cure53-Security-Audit-2015) have not been fixed in APG since the last release at 2014-03-24. 
+We strongly recommend that users migrate to OpenKeychain and help us to actively maintain a security solution for Android.
 
 ## How to migrate from APG to OpenKeychain?
 
