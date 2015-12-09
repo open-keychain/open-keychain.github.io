@@ -1,5 +1,5 @@
 /* ========================================================================
- * Bootstrap: modal.js v3.3.2
+ * Bootstrap: modal.js v3.3.6
  * http://getbootstrap.com/javascript/#modals
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
@@ -14,12 +14,15 @@
   // ======================
 
   var Modal = function (element, options) {
-    this.options        = options
-    this.$body          = $(document.body)
-    this.$element       = $(element)
-    this.$backdrop      =
-    this.isShown        = null
-    this.scrollbarWidth = 0
+    this.options             = options
+    this.$body               = $(document.body)
+    this.$element            = $(element)
+    this.$dialog             = this.$element.find('.modal-dialog')
+    this.$backdrop           = null
+    this.isShown             = null
+    this.originalBodyPad     = null
+    this.scrollbarWidth      = 0
+    this.ignoreBackdropClick = false
 
     if (this.options.remote) {
       this.$element
@@ -30,7 +33,7 @@
     }
   }
 
-  Modal.VERSION  = '3.3.2'
+  Modal.VERSION  = '3.3.6'
 
   Modal.TRANSITION_DURATION = 300
   Modal.BACKDROP_TRANSITION_DURATION = 150
@@ -64,6 +67,12 @@
 
     this.$element.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
 
+    this.$dialog.on('mousedown.dismiss.bs.modal', function () {
+      that.$element.one('mouseup.dismiss.bs.modal', function (e) {
+        if ($(e.target).is(that.$element)) that.ignoreBackdropClick = true
+      })
+    })
+
     this.backdrop(function () {
       var transition = $.support.transition && that.$element.hasClass('fade')
 
@@ -75,23 +84,20 @@
         .show()
         .scrollTop(0)
 
-      if (that.options.backdrop) that.adjustBackdrop()
       that.adjustDialog()
 
       if (transition) {
         that.$element[0].offsetWidth // force reflow
       }
 
-      that.$element
-        .addClass('in')
-        .attr('aria-hidden', false)
+      that.$element.addClass('in')
 
       that.enforceFocus()
 
       var e = $.Event('shown.bs.modal', { relatedTarget: _relatedTarget })
 
       transition ?
-        that.$element.find('.modal-dialog') // wait for modal to slide in
+        that.$dialog // wait for modal to slide in
           .one('bsTransitionEnd', function () {
             that.$element.trigger('focus').trigger(e)
           })
@@ -118,8 +124,10 @@
 
     this.$element
       .removeClass('in')
-      .attr('aria-hidden', true)
       .off('click.dismiss.bs.modal')
+      .off('mouseup.dismiss.bs.modal')
+
+    this.$dialog.off('mousedown.dismiss.bs.modal')
 
     $.support.transition && this.$element.hasClass('fade') ?
       this.$element
@@ -179,14 +187,20 @@
     if (this.isShown && this.options.backdrop) {
       var doAnimate = $.support.transition && animate
 
-      this.$backdrop = $('<div class="modal-backdrop ' + animate + '" />')
-        .prependTo(this.$element)
-        .on('click.dismiss.bs.modal', $.proxy(function (e) {
-          if (e.target !== e.currentTarget) return
-          this.options.backdrop == 'static'
-            ? this.$element[0].focus.call(this.$element[0])
-            : this.hide.call(this)
-        }, this))
+      this.$backdrop = $(document.createElement('div'))
+        .addClass('modal-backdrop ' + animate)
+        .appendTo(this.$body)
+
+      this.$element.on('click.dismiss.bs.modal', $.proxy(function (e) {
+        if (this.ignoreBackdropClick) {
+          this.ignoreBackdropClick = false
+          return
+        }
+        if (e.target !== e.currentTarget) return
+        this.options.backdrop == 'static'
+          ? this.$element[0].focus()
+          : this.hide()
+      }, this))
 
       if (doAnimate) this.$backdrop[0].offsetWidth // force reflow
 
@@ -221,14 +235,7 @@
   // these following methods are used to handle overflowing modals
 
   Modal.prototype.handleUpdate = function () {
-    if (this.options.backdrop) this.adjustBackdrop()
     this.adjustDialog()
-  }
-
-  Modal.prototype.adjustBackdrop = function () {
-    this.$backdrop
-      .css('height', 0)
-      .css('height', this.$element[0].scrollHeight)
   }
 
   Modal.prototype.adjustDialog = function () {
@@ -248,17 +255,23 @@
   }
 
   Modal.prototype.checkScrollbar = function () {
-    this.bodyIsOverflowing = document.body.scrollHeight > document.documentElement.clientHeight
+    var fullWindowWidth = window.innerWidth
+    if (!fullWindowWidth) { // workaround for missing window.innerWidth in IE8
+      var documentElementRect = document.documentElement.getBoundingClientRect()
+      fullWindowWidth = documentElementRect.right - Math.abs(documentElementRect.left)
+    }
+    this.bodyIsOverflowing = document.body.clientWidth < fullWindowWidth
     this.scrollbarWidth = this.measureScrollbar()
   }
 
   Modal.prototype.setScrollbar = function () {
     var bodyPad = parseInt((this.$body.css('padding-right') || 0), 10)
+    this.originalBodyPad = document.body.style.paddingRight || ''
     if (this.bodyIsOverflowing) this.$body.css('padding-right', bodyPad + this.scrollbarWidth)
   }
 
   Modal.prototype.resetScrollbar = function () {
-    this.$body.css('padding-right', '')
+    this.$body.css('padding-right', this.originalBodyPad)
   }
 
   Modal.prototype.measureScrollbar = function () { // thx walsh
@@ -1665,7 +1678,7 @@ QRBitBuffer.prototype = {
 			address: null,
 			label: null
 		}, options );
-		
+
 		button = generateDonationButton(options, this);
 		return button;
 	};
@@ -1710,7 +1723,7 @@ function generateDonationPayment(currency, address, amount, label, iso) {
 
 	var uri;
 
-	// Label specified? 
+	// Label specified?
 	if (label === undefined) {
 		uri = currency+":"+address+"?amount="+amount;
 
@@ -1742,7 +1755,8 @@ function buildDonateModalHtml(type, currency, iso, address, label, name) {
 	var html,
         show_options = true,
         type = type.charAt(0).toUpperCase() + type.slice(1),
-        amounts;
+        amounts,
+				placeholder = 'Select Amount';
 
 	// Set donation amounts
 	if (currency === "bitcoin") {
@@ -1762,10 +1776,10 @@ function buildDonateModalHtml(type, currency, iso, address, label, name) {
 	// Assign default donation values to supported coins.
 	// Hide prefilled options for unsupported coins.
 	if (show_options === true) {
-		html = '<div id="'+currency+'-donation-overlay" class="modal fade '+currency+'"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">'+type+' to '+name+'</h4></div><div class="modal-body"><div class="well">'+type+' <input type="text" name="donation-amount" id="donation-amount" size="4" value="" placeholder="'+amounts[0]+'"> '+iso+' to <strong>'+name+'</strong>.</div><table class="donation-options"><td>Amount:</td><td><label class="radio inline"><input id="donation-option-1" name="donation-option" type="radio" value="'+amounts[0]+'">'+amounts[0]+' '+iso+'</label></td><td><label class="radio inline"><input id="donation-option-2" name="donation-option" type="radio" value="'+amounts[1]+'">'+amounts[1]+' '+iso+'</label></td><td><label class="radio inline"><input id="donation-option-3" name="donation-option" type="radio" value="'+amounts[2]+'">'+amounts[2]+' '+iso+'</label></td><td><label class="radio inline"><input id="donation-option-4" name="donation-option" type="radio" value="'+amounts[3]+'">'+amounts[3]+' '+iso+'</label></td><td><label class="radio inline"><input id="donation-option-5" name="donation-option" type="radio" value="'+amounts[4]+'">'+amounts[4]+' '+iso+'</label></td></table><table class="donation-payment"><td><div id="qrcode"><img src="https://placehold.it/170/ffffff/999999&text=Select amount" alt=""></div></td><td><p>Send <span class="span-amount">selected amount</span> to:</p><input type="text" value="'+address+'" class="span-uri form-control" readonly><br><p>Thank you for your support!</p></td></table></div><div class="modal-footer"><p class="powered-by">Powered by <a href="https://github.com/jeremymouton/cointipper" target="_blank">CoinTipper</a></p><a href="'+currency+':'+address+'?label='+label+'" class="span-uri btn btn-primary">Send with Wallet</a><a class="btn" data-dismiss="modal">Done</a></div></div></div></div>';
+		html = '<div id="'+currency+'-donation-overlay" class="modal fade '+currency+'"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">'+type+' to '+name+'</h4></div><div class="modal-body"><div class="well">'+type+' <input type="text" name="donation-amount" id="donation-amount" size="4" value="" placeholder="'+amounts[0]+'"> '+iso+' to <strong>'+name+'</strong>.</div><table class="donation-options"><td>Amount:</td><td><label class="radio inline"><input id="donation-option-1" name="donation-option" type="radio" value="'+amounts[0]+'">'+amounts[0]+' '+iso+'</label></td><td><label class="radio inline"><input id="donation-option-2" name="donation-option" type="radio" value="'+amounts[1]+'">'+amounts[1]+' '+iso+'</label></td><td><label class="radio inline"><input id="donation-option-3" name="donation-option" type="radio" value="'+amounts[2]+'">'+amounts[2]+' '+iso+'</label></td><td><label class="radio inline"><input id="donation-option-4" name="donation-option" type="radio" value="'+amounts[3]+'">'+amounts[3]+' '+iso+'</label></td><td><label class="radio inline"><input id="donation-option-5" name="donation-option" type="radio" value="'+amounts[4]+'">'+amounts[4]+' '+iso+'</label></td></table><table class="donation-payment"><td><div id="qrcode"><span class="qrcode-placeholder">'+placeholder+'</span></div></td><td><p>Send <span class="span-amount">selected amount</span> to:</p><input type="text" value="'+address+'" class="span-uri form-control" readonly><br><p>Thank you for your support!</p></td></table></div><div class="modal-footer"><p class="powered-by">Powered by <a href="https://github.com/jeremymouton/cointipper" target="_blank">CoinTipper</a></p><a href="'+currency+':'+address+'?label='+label+'" class="span-uri btn btn-primary">Send with Wallet</a><a class="btn" data-dismiss="modal">Done</a></div></div></div></div>';
 	} else {
-		html = '<div id="'+currency+'-donation-overlay" class="modal fade '+currency+'"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">'+type+' to '+name+'</h4></div><div class="modal-body"><div class="well">'+type+' <input type="text" name="donation-amount" id="donation-amount" size="4" value=""> '+iso+' to <strong>'+name+'</strong>.</div><table class="donation-payment"><td><div id="qrcode"><img src="https://placehold.it/170/ffffff/999999&text=Select amount" alt=""></div></td><td><p>Send <span class="span-amount">selected amount</span> to:</p><input type="text" value="'+address+'" class="span-uri form-control" readonly><br><p>Thank you for your support!</p></td></table></div><div class="modal-footer"><p class="powered-by">Powered by <a href="https://github.com/jeremymouton/cointipper" target="_blank">CoinTipper</a></p><a href="'+currency+':'+address+'?label='+label+'" class="span-uri btn btn-primary">Send with Wallet</a><a class="btn" data-dismiss="modal">Done</a></div></div></div></div>';
+		html = '<div id="'+currency+'-donation-overlay" class="modal fade '+currency+'"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">'+type+' to '+name+'</h4></div><div class="modal-body"><div class="well">'+type+' <input type="text" name="donation-amount" id="donation-amount" size="4" value=""> '+iso+' to <strong>'+name+'</strong>.</div><table class="donation-payment"><td><div id="qrcode"><span class="qrcode-placeholder">'+placeholder+'</span></div></td><td><p>Send <span class="span-amount">selected amount</span> to:</p><input type="text" value="'+address+'" class="span-uri form-control" readonly><br><p>Thank you for your support!</p></td></table></div><div class="modal-footer"><p class="powered-by">Powered by <a href="https://github.com/jeremymouton/cointipper" target="_blank">CoinTipper</a></p><a href="'+currency+':'+address+'?label='+label+'" class="span-uri btn btn-primary">Send with Wallet</a><a class="btn" data-dismiss="modal">Done</a></div></div></div></div>';
 	}
-	
+
 	return html;
 }

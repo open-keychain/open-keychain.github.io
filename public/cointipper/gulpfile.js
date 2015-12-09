@@ -16,48 +16,56 @@ var
   rename       = require('gulp-rename'),
   path         = require('path'),
   sourcemaps   = require('gulp-sourcemaps'),
+  autoprefixer = require('gulp-autoprefixer'),
   livereload   = require('gulp-livereload');
+
+var paths = {
+  bower: 'bower_components',
+  src: 'src',
+  build: 'dist'
+}
 
 // CSS
 gulp.task('css', function() {
-  var stream = gulp
-    .src('src/less/jquery.cointipper.less')
+  return gulp
+    .src(paths.src + '/less/jquery.cointipper.less')
     .pipe(sourcemaps.init())
     .pipe(less().on('error', notify.onError(function (error) {
       return 'Error compiling LESS: ' + error.message;
     })))
-    .pipe(sourcemaps.write());
-
-  return stream
-    .pipe(gulp.dest('dist/css'))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(paths.build + '/css'))
     .pipe(minifycss())
-    .pipe(rename('jquery.cointipper.min.css'))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(rename(function (path) {
+      if(path.extname === '.css') {
+        path.basename += '.min';
+      }
+    }))
+    .pipe(gulp.dest(paths.build + '/css'))
     .pipe(notify({ message: 'Successfully compiled LESS' }));
 });
 
 // JS
 gulp.task('js', function() {
   var scripts = [
-    'src/components/bootstrap/js/modal.js',
-    'src/components/jquery-qrcode/src/jquery.qrcode.js',
-    'src/components/jquery-qrcode/src/qrcode.js',
-    'src/js/jquery.cointipper.js'
+    paths.bower + '/bootstrap/js/modal.js',
+    paths.bower + '/jquery-qrcode/src/jquery.qrcode.js',
+    paths.bower + '/jquery-qrcode/src/qrcode.js',
+    paths.src + '/js/jquery.cointipper.js'
   ];
 
-  var stream = gulp
+  return gulp
     .src(scripts)
-    .pipe(concat('jquery.cointipper-pack.js'));
-
-  return stream
-    .pipe(gulp.dest('dist/js'))
+    .pipe(concat('jquery.cointipper-pack.js'))
+    .pipe(gulp.dest(paths.build + '/js'))
     .pipe(uglify({ outSourceMap: true }))
     .pipe(rename(function (path) {
       if(path.extname === '.js') {
         path.basename += '.min';
       }
     }))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest(paths.build + '/js'))
     .pipe(notify({ message: 'Successfully compiled JavaScript' }));
 });
 
@@ -65,7 +73,10 @@ gulp.task('js', function() {
 // Rimraf
 gulp.task('rimraf', function() {
   return gulp
-    .src(['dist/css', 'dist/js'], {read: false})
+    .src([
+        paths.build + '/css',
+        paths.build + '/js'
+      ], {read: false})
     .pipe(rimraf());
 });
 
@@ -78,13 +89,13 @@ gulp.task('default', ['rimraf'], function() {
 gulp.task('watch', function() {
 
   // Watch .less files
-  gulp.watch('src/less/**/*.less', ['css']);
+  gulp.watch(paths.src + '/less/**/*.less', ['css']);
 
   // Watch .js files
-  gulp.watch('src/js/**/*.js', ['js']);
+  gulp.watch(paths.src + '/js/**/*.js', ['js']);
 
   // Livereload
   livereload.listen();
-  gulp.watch('dist/**/*').on('change', livereload.changed);
-  
+  gulp.watch(paths.build + '/**/*').on('change', livereload.changed);
+
 });
