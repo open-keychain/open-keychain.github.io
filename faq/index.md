@@ -128,8 +128,8 @@ Thus, we started OpenKeychain with the intention of picking up the development t
 A first version 2.0 has been released in January 2013.
 After three years without updates, APG merged back security fixes from OpenKeychain and some months later rebased an entire [new version on OpenKeychain's source code](http://www.thialfihar.org/projects/apg/).
 However, this process stopped in March 2014, while we continue to release regularly new versions of OpenKeychain.
-At time of writing (2015-12-09), a number of [security fixes](https://github.com/open-keychain/open-keychain/wiki/cure53-Security-Audit-2015) have not been fixed in APG since the last release at 2014-03-24. 
-We strongly recommend that users migrate to OpenKeychain and help us to actively maintain a security solution for Android.
+At time of writing (2015-12-09), a number of [vulnerabilities](https://github.com/open-keychain/open-keychain/wiki/cure53-Security-Audit-2015) have not been fixed in APG since the last release at 2014-03-24.
+We strongly recommend that users migrate to OpenKeychain and developers help us to actively maintain a OpenPGP solution for Android.
 
 ## How to migrate from APG to OpenKeychain?
 
