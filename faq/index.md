@@ -75,6 +75,26 @@ This is not a supported use case. You can, however, simply create a new key whic
 
 You probably don't have any stand-alone file managers installed, like [OI File Manager](https://f-droid.org/repository/browse/?fdid=org.openintents.filemanager) or [Amaze](https://f-droid.org/repository/browse/?fdid=com.amaze.filemanager). OpenKeychain needs one in order to select files from local storage or SD card, such as for importing keys or encrypting/decrypting files.
 
+# NFC Security Tokens
+
+## What Security Tokens are recommended for OpenKeychain?
+  * [Fidesmo Privacy Card](http://shop.fidesmo.com/product/android-privacy-card-black/) (15 EUR)
+  * [YubiKey NEO](https://www.yubico.com/products/yubikey-hardware/yubikey-neo/) (50 EUR / 50 USD)
+  * [SIGILANCE](https://www.sigilance.com/) (25 USD)
+
+## How to import an existing key onto the YubiKey NEO?
+Follow [https://developers.yubico.com/PGP/Importing\_keys.html](https://developers.yubico.com/PGP/Importing_keys.html)
+
+## Are there other compatible security tokens besides the recommended ones?
+Besides Fidesmo, YubiKey and SIGILANCE, we don't know of other NFC-enabled security tokens that support OpenPGP out of the box. You can however buy one of the following products and install [ykneo-openpgp](https://github.com/Yubico/ykneo-openpgp) by yourself. We wouldn't encourage you to do this as it requires to install special tools.
+
+  * [J3D081, JCOP v2.4.2 Card from cryptoshop.com](http://www.cryptoshop.com) (TESTED, works with ykneo-openpgp applet)
+  * [JavaCOS A22 dual interface Java card - 150K from smartcardfocus.us](http://www.smartcardfocus.us)
+  * [J3A040 or J3A080 from smartcardsource.com](http://www.smartcardsource.com)
+  * [J3A040 or J3A080 from motechno.com](http://www.motechno.com)
+  * [A40CR from javacardos.com](http://www.javacardos.com) (NOT WORKING PROPERLY; Messaging support needs to be stripped from ykneo-openpgp, even then signing is broken)
+
+
 # Avanced Questions
 
 ## Why is OpenKeychain's database not password protected?
@@ -96,25 +116,6 @@ Also, asking for a password before delete would prevent you from deleting keys w
 
 OpenKeychain assumes that OpenPGP keys hold one usable signing subkey only and selects the first non-revoked non-expired non-stripped one it finds in the unordered list of subkeys.
 We consider having more than one valid signing subkey an advanced usecase. You can either strip subkeys that should not be used using OpenKeychain's edit key screen or explicitly select the right subkeys when exporting from gpg with ``gpg --export-secret-subkeys``.
-
-## How to import an existing key onto the YubiKey NEO?
-Follow [https://developers.yubico.com/PGP/Importing\_keys.html](https://developers.yubico.com/PGP/Importing_keys.html)
-
-## Advanced YubiKey NEO Information
-  * [https://developers.yubico.com/ykneo-openpgp](https://developers.yubico.com/ykneo-openpgp)
-  * [https://github.com/Yubico/ykneo-openpgp](https://github.com/Yubico/ykneo-openpgp)
-
-## Are there other compatible security tokens besides the YubiKey NEO that are supported?
-  * [SIGILANCE](https://www.sigilance.com/) supports OpenKeychain out of the box
-  * [Fidesmo](http://fidesmo.com/) supports OpenKeychain by installing the *Fidesmo PGP* card app
-
-Besides those, we don't know of other NFC-enabled security tokens that support OpenPGP out of the box. You can however buy one of the following products and install [ykneo-openpgp](https://github.com/Yubico/ykneo-openpgp) by yourself. We wouldn't encourage you to do this as it requires to install special tools.
-
-  * [J3D081, JCOP v2.4.2 Card from cryptoshop.com](http://www.cryptoshop.com) (TESTED, works with ykneo-openpgp applet)
-  * [JavaCOS A22 dual interface Java card - 150K from smartcardfocus.us](http://www.smartcardfocus.us)
-  * [J3A040 or J3A080 from smartcardsource.com](http://www.smartcardsource.com)
-  * [J3A040 or J3A080 from motechno.com](http://www.motechno.com)
-  * [A40CR from javacardos.com](http://www.javacardos.com) (NOT WORKING PROPERLY; Messaging support needs to be stripped from ykneo-openpgp, even then signing is broken)
 
 ## Where can I find more information about OpenKeychain's security model and design decisions?
 
