@@ -77,12 +77,12 @@ You probably don't have any stand-alone file managers installed, like [OI File M
 
 # NFC Security Tokens
 
-## What Security Tokens are recommended for OpenKeychain?
+## What security tokens are recommended for OpenKeychain?
   * [Fidesmo Privacy Card](http://shop.fidesmo.com/product/android-privacy-card-black/) (15 EUR)
   * [YubiKey NEO](https://www.yubico.com/products/yubikey-hardware/yubikey-neo/) (50 EUR / 50 USD)
   * [SIGILANCE](https://www.sigilance.com/) (25 USD)
 
-## How to import an existing key onto the YubiKey NEO?
+## How to import an existing key onto a security token?
 Follow [https://developers.yubico.com/PGP/Importing\_keys.html](https://developers.yubico.com/PGP/Importing_keys.html)
 
 ## Are there other compatible security tokens besides the recommended ones?
