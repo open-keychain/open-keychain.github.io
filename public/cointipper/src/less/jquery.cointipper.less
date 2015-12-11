@@ -6,7 +6,7 @@
 // ======================
 
 // !!
-// Need to clean up this file.
+// Seriously need to clean up this file.
 
 @bower_components: '../../bower_components';
 
@@ -26,6 +26,9 @@
 /* Button styles */
 /* You can make modifications below to change the look of the buttons*/
 
+a.donate-btn:active,
+a.donate-btn:focus,
+a.donate-btn:hover,
 a.donate-btn {
 	text-transform: capitalize;
 	text-decoration: none;
@@ -754,6 +757,7 @@ fieldset[disabled] [id*='-donation-overlay'] .btn.btn-primary.active {
 	border-radius: 2px;
 	padding: 9px 9px;
 	border: 1px solid #ccc;
+	min-width: 70px;
 }
 [id*='-donation-overlay'] table.donation-options {
 	width: 100%;
@@ -803,6 +807,14 @@ fieldset[disabled] [id*='-donation-overlay'] .btn.btn-primary.active {
 			width: 99%;
 		}
 	}
+
+	table {
+		border: 0;
+
+		td {
+			border: 0;
+		}
+	}
 }
 @media (max-width: 767px) {
 	[id*='-donation-overlay'] table.donation-payment td {
@@ -815,14 +827,23 @@ fieldset[disabled] [id*='-donation-overlay'] .btn.btn-primary.active {
 	background: #000;
 }
 [id*='-donation-overlay'] #qrcode {
-	margin-right: 10px;
+	display: block;
 	height: 190px;
 	width: 190px;
 	position: relative;
 	text-align: center;
-}
+	margin: 0 auto;
 
+	@media (min-width: @screen-sm) {
+		padding: 10px 20px 10px 0;
+	}
+	
+	&:active,
+	&:focus,
+	&:hover { text-decoration: none; }
+}
 [id*='-donation-overlay'] .qrcode-placeholder {
+	color: #333;
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
