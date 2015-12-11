@@ -161,3 +161,14 @@ Unfortunately, this is a bug in the SKS Keyserver software. Its machine-readable
 
 For now, OpenKeychain will not support AOSP Mail due to bugs in AOSP were we cannot work around ([#290](https://github.com/open-keychain/open-keychain/issues/290)).
 
+# Partners and Support
+
+OpenKeychain is a project primarily driven by Dominik Schürmann and Vincent Breitmoser in their free time.
+However, we were supported by these companies/donations:
+
+  * Your donations
+  * [Yubico's YubiKing price](https://www.openkeychain.org/yubiking/)
+  * [Institute for Operating Systems and Computer Networks at TU Braunschweig](https://www.ibr.cs.tu-bs.de/)
+  * Security audit sponsored by [Open Technology Fund](https://www.opentech.fund/)
+  * Hacking-Week at [mailbox.org](https://mailbox.org/) offices in Berlin together with K-9 Mail developers
+  * [Google Summer of Code 2014 and 2015 and with 4 successful students](http://www.google-melange.com/gsoc/homepage/google/gsoc2015)
