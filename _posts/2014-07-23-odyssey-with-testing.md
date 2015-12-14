@@ -3,9 +3,6 @@ layout: post
 title: Our Odyssey with Testing on Android
 ---
 
-
-==================
-
 As part of my Google Summer of Code proposal, I am currently working on adding
 unit tests to OpenKeychain for crypto-related code. Gradle comes with built-in
 JUnit support so this should not be a problem - or so I thought. Two days into

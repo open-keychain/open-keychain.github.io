@@ -167,8 +167,9 @@ OpenKeychain is a project primarily driven by Dominik Schürmann and Vincent Bre
 However, we were supported by these companies/donations:
 
   * Your donations
-  * [Yubico's YubiKing price](https://www.openkeychain.org/yubiking/)
-  * [Institute for Operating Systems and Computer Networks at TU Braunschweig](https://www.ibr.cs.tu-bs.de/)
-  * Security audit sponsored by [Open Technology Fund](https://www.opentech.fund/)
-  * Hacking-Week at [mailbox.org](https://mailbox.org/) offices in Berlin together with K-9 Mail developers
   * [Google Summer of Code 2014 and 2015 and with 4 successful students](http://www.google-melange.com/gsoc/homepage/google/gsoc2015)
+  * [Institute for Operating Systems and Computer Networks at TU Braunschweig](https://www.ibr.cs.tu-bs.de/)
+  * [Funding for one year to improve K-9 Mail support by Open Technology Fund](https://www.openkeychain.org/k-9/)
+  * Security audit sponsored by [Open Technology Fund](https://www.opentech.fund/)
+  * [Yubico's YubiKing price](https://www.openkeychain.org/yubiking/)
+  * Hacking week at [mailbox.org](https://mailbox.org/) offices in Berlin together with K-9 Mail developers
