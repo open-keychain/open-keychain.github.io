@@ -95,7 +95,7 @@ Besides Fidesmo, YubiKey and SIGILANCE, we don't know of other NFC-enabled secur
   * [A40CR from javacardos.com](http://www.javacardos.com) (NOT WORKING PROPERLY; Messaging support needs to be stripped from ykneo-openpgp, even then signing is broken)
 
 
-# Avanced Questions
+# Advanced Questions
 
 ## Why is OpenKeychain's database not password protected?
 
@@ -159,7 +159,7 @@ Unfortunately, this is a bug in the SKS Keyserver software. Its machine-readable
 
 ## Not working with AOSP Mail
 
-For now, OpenKeychain will not support AOSP Mail due to bugs in AOSP were we cannot work around ([#290](https://github.com/open-keychain/open-keychain/issues/290)).
+For now, OpenKeychain will not support AOSP Mail due to bugs in AOSP which we cannot work around ([#290](https://github.com/open-keychain/open-keychain/issues/290)).
 
 # Partners and Support
 
