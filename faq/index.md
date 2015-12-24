@@ -78,7 +78,14 @@ You probably don't have any stand-alone file managers installed, like [OI File M
 # NFC Security Tokens
 
 ## What security tokens are recommended for OpenKeychain?
-  * [Fidesmo Privacy Card](http://shop.fidesmo.com/product/android-privacy-card-black/) (15 EUR)
+
+<img style="float: left" src="{{ site.url }}/public/images/fidesmo.png" />
+
+We recommend the Fidesmo Privacy Card, which can be bought for 14 EUR using the discount code ``OPENKEYCHAIN2016`` on the [Fidesmo Shop](http://shop.fidesmo.com/product/android-privacy-card).
+Don't forget to enter the discount code before checking out, you are saving 1 EUR and are supporting the OpenKeychain project!
+
+Other supported tokens:
+
   * [YubiKey NEO](https://www.yubico.com/products/yubikey-hardware/yubikey-neo/) (50 EUR / 50 USD)
   * [SIGILANCE](https://www.sigilance.com/) (25 USD)
 
