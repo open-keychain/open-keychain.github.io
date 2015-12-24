@@ -79,7 +79,7 @@ You probably don't have any stand-alone file managers installed, like [OI File M
 
 ## What security tokens are recommended for OpenKeychain?
 
-<img style="float: left" src="{{ site.url }}/public/images/fidesmo.png" />
+<img style="float: left; padding: 10px;" src="{{ site.url }}/public/images/fidesmo.png" />
 
 We recommend the Fidesmo Privacy Card, which can be bought for 14 EUR using the discount code ``OPENKEYCHAIN2016`` on the [Fidesmo Shop](http://shop.fidesmo.com/product/android-privacy-card).
 Don't forget to enter the discount code before checking out, you are saving 1 EUR and are supporting the OpenKeychain project!
