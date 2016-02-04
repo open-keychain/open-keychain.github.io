@@ -4,6 +4,10 @@ title: FAQ
 ---
 [//]: # (NOTE: Please put every sentence in its own line, Transifex puts every line in its own translation field!)
 
+# Contents
+{:.no_toc}
+
+* Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
 # Frequently Asked Questions
