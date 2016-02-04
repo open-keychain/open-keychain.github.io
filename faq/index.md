@@ -101,10 +101,10 @@ Follow [https://developers.yubico.com/PGP/Importing\_keys.html](https://develope
 Besides Fidesmo, YubiKey and SIGILANCE, we don't know of other NFC-enabled security tokens that support OpenPGP out of the box. You can however buy one of the following products and install [ykneo-openpgp](https://github.com/Yubico/ykneo-openpgp) by yourself. We wouldn't encourage you to do this as it requires to install special tools.
 
   * [J3D081, JCOP v2.4.2 Card from cryptoshop.com](http://www.cryptoshop.com) (TESTED, works with ykneo-openpgp applet)
-  * [JavaCOS A22 dual interface Java card - 150K from smartcardfocus.us](http://www.smartcardfocus.us)
-  * [J3A040 or J3A080 from smartcardsource.com](http://www.smartcardsource.com)
-  * [J3A040 or J3A080 from motechno.com](http://www.motechno.com)
-  * [A40CR from javacardos.com](http://www.javacardos.com) (NOT WORKING PROPERLY; Messaging support needs to be stripped from ykneo-openpgp, even then signing is broken)
+  * [A40CR from javacardos.com](http://www.javacardos.com) (NEEDS HACK; Messaging support needs to be stripped from ykneo-openpgp)
+  * [JavaCOS A22 dual interface Java card - 150K from smartcardfocus.us](http://www.smartcardfocus.us) (NOT TESTED)
+  * [J3A040 or J3A080 from smartcardsource.com](http://www.smartcardsource.com) (NOT TESTED)
+  * [J3A040 or J3A080 from motechno.com](http://www.motechno.com) (NOT TESTED)
 
 
 # Advanced Questions
