@@ -1,12 +1,9 @@
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 permalink: /:title
 
 url: https://www.openkeychain.org
 baseurl: 
-
-redcarpet:
-  extensions: [strikethrough, tables, with_toc_data]
 
 sass:
   sass_dir: public/css
