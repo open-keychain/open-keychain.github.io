@@ -5,8 +5,8 @@ title: About
 
 <div style="float: right;">
 <p style="width:130px;margin-left:auto;margin-right:auto;margin-bottom:0px">
-<a style="margin-bottom:0px" href="https://f-droid.org/app/org.sufficientlysecure.keychain"><img src="{{ site.url }}/public/images/fdroid.png" width="129" height="45" /></a>
-<a style="margin-bottom:0px" href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain"><img src="{{ site.url }}/public/images/google_play.png" width="129" height="45" /></a>
+<a href="https://f-droid.org/app/org.sufficientlysecure.keychain"><img style="margin-bottom:0px" src="{{ site.url }}/public/images/fdroid.png" width="129" height="45" /></a>
+<a href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain"><img style="margin-bottom:0px" src="{{ site.url }}/public/images/google_play.png" width="129" height="45" /></a>
 </p>
 <p><img src="{{ site.url }}/public/images/screen1.png" /></p>
 </div>
