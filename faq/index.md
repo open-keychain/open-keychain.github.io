@@ -35,7 +35,7 @@ Otherwise, they should be fine.
     backups are encrypted with Advanced Encryption Standard (AES) using
     securely generated Backup Codes.
  2. On your PC, execute ``gpg --decrypt backup_YYYY-MM-DD.pgp | gpg --import`` (replace ``backup_YYYY-MM-DD.pgp`` with your backup file)
- 3. Enter the full Backup Code with uppercase letters and dashes, e.g., "ABCDEF-GHIJKL-MNOPQR-STUVWX"
+ 3. Enter the full Backup Code with uppercase letters and dashes, e.g., "ABCD-EFGH-IJKL-MNOP-QRST-UVWX"
 
 ## What is the best way to transfer my own key to OpenKeychain?
 
@@ -51,7 +51,8 @@ gpg --armor --export-secret-keys YOUREMAILADDRESS | gpg --armor --symmetric --ou
 
 Longer answer:
 
-You should make sure that your key can't be intercepted during transfer.  If you have an SD-Card reader in your phone, you can use this to easily transfer your key.  If you don't, you can transfer your key through an online service (such as E-Mail, Dropbox, …), but **make sure to encrypt it** during transfer!
+You should make sure that your key can't be intercepted during transfer.  If you have an SD-Card reader in your phone, you can use this to easily transfer your key.
+If you don't, you can transfer your key through an online service (such as E-Mail, Dropbox, …), but **make sure to encrypt it** during transfer!
 
 To transfer your key to OpenKeychain from `gpg`, the best way to do so is to encrypt it with a single-use password, which you never use anywhere else and never send online. Use `gpg` as shown above to generate a random password, then export and encrypt your key with it.
 
