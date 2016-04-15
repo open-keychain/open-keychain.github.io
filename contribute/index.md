@@ -13,11 +13,11 @@ So, if you want to start hacking, read our [5 points guide on Github](https://gi
 
 ## Translations
 
-Help translating OpenKeychain! Everybody can participate at [OpenKeychain on Transifex](https://www.transifex.com/projects/p/open-keychain/).  
+Help translating OpenKeychain! Everybody can participate at [OpenKeychain on Transifex](https://www.transifex.com/otf/open-keychain/).  
 We collect some helpful information regarding the language and usage of Transifex [in our Wiki](https://github.com/open-keychain/open-keychain/wiki/Language-Conventions).
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" src="https://www.transifex.com/_/charts/js/sufficientlysecure/open-keychain/inc_js/strings/"></script>
+<script type="text/javascript" src="https://www.transifex.com/_/charts/js/otf/open-keychain/inc_js/strings/"></script>
 <div id="txchart-open-keychain-strings">Loading chart...</div>
 
 ## Website
