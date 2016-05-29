@@ -31,7 +31,13 @@ Otherwise, they should be fine.
     or a cloud provider, like Dropbox. This is safe because OpenKeychain
     backups are encrypted with Advanced Encryption Standard (AES) using
     securely generated Backup Codes.
- 2. On your PC, execute ``gpg --decrypt backup_YYYY-MM-DD.pgp | gpg --import`` (replace ``backup_YYYY-MM-DD.pgp`` with your backup file)
+ 2. On your PC, execute the following line: 
+
+    ```
+    # replace 'backup_YYYY-MM-DD.pgp' with the name of your backup file
+    gpg --decrypt backup_YYYY-MM-DD.pgp | gpg --import
+    ```
+
  3. Enter the full Backup Code with uppercase letters and dashes, e.g., "ABCD-EFGH-IJKL-MNOP-QRST-UVWX"
 
 ## What is the best way to transfer my own key to OpenKeychain?
