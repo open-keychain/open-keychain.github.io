@@ -1,7 +1,9 @@
 ---
 layout: post
-title: Fidesmo Cards for Contributors
+title: Free Fidesmo Cards for New Contributors
 ---
+
+<img style="float: right; padding: 10px; width: 180px; height: 180px;" src="{{ site.url }}/public/images/fidesmo_card.svg" />
 
 Every now and then we receive pull requests from contributors which fix bugs, make improvements or even add a new feature to OpenKeychain.
 This is what open source is all about, and it's what keeps us going.
