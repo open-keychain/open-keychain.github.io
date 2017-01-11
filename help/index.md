@@ -39,3 +39,7 @@ See [cure53 security audit](https://github.com/open-keychain/open-keychain/wiki/
 # Export Regulations
 We are required to comply with U.S. export regulations due to the distributon of our apps on Google Play.
 See [Export Regulations](https://www.openkeychain.org/help/export-regulations) for more information.
+
+# Privacy Policy
+Because we request [/sensitive permissions/, Google requires](https://support.google.com/googleplay/android-developer/answer/113469#privacy) us to provide a Privacy Policy.
+See [Privacy Policy](https://www.openkeychain.org/help/privacy-policy) for more information.
