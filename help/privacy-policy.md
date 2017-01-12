@@ -20,6 +20,7 @@ By default the [SKS keyserver pool](https://sks-keyservers.net/) is used.
 
 Because we request the CAMERA, GET_ACCOUNTS, and CONTACTS permissions, we [are required](https://support.google.com/googleplay/android-developer/answer/113469#privacy) to provide this Privacy Polic
 Data aquired using these permissions is not shared with any online services.
-* The CAMERA permissions is required to scan QR Codes.
-* GET_ACCOUNTS is required to provide helpful autocomplete functionality for email addresses.
-* CONTACTS is required to link keys to contacts in your address book. This is done offline.
+
+  * The CAMERA permissions is required to scan QR Codes.
+  * GET_ACCOUNTS is required to provide helpful autocomplete functionality for email addresses.
+  * CONTACTS is required to link keys to contacts in your address book. This is done offline.
