@@ -34,5 +34,5 @@ The OpenPGP API is more sophisticated and allows to to operations without user i
 
 More technical information and examples for these APIs can be found here:
 
-  * [OpenKeychain Intents](https://github.com/open-keychain/openkeychain-intents)
+  * [OpenKeychain Intents](https://github.com/open-keychain/open-keychain/wiki/Intents)
   * [OpenPGP API](https://github.com/open-keychain/openpgp-api)
