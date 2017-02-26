@@ -11,9 +11,9 @@ title: About
 <p><img src="{{ site.url }}/public/images/screen1.png" /></p>
 </div>
 
-OpenKeychain helps you communicate more privately and securely. It uses high-quality modern encryption to ensure that your messages can be read only by the people you send them to, others can send you messages that only you can read, and these messages can be digitally signed so the people getting them are sure who sent them. OpenKeychain is based on the well established OpenPGP standard making encryption compatible across your devices and operating systems.
+OpenKeychain helps you communicate more privately and securely. It uses encryption to ensure that your messages can be read only by the people you send them to, others can send you messages that only you can read, and these messages can be digitally signed so the people getting them are sure who sent them. OpenKeychain is based on the well established OpenPGP standard making encryption compatible across your devices and systems. For a list of compatible software for Windows, Mac OS, and other operating systems consult [http://openpgp.org/software/](http://openpgp.org/software/).
 
-Modern encryption is based on digital “keys”. OpenKeychain stores and manages your keys, and those of the people you communicate with, on your Android. It also helps you find others’ keys online, and interchange keys by touching devices. But its most frequent use is in using those keys to encrypt and decrypt messages.
+Modern encryption is based on digital “keys”. OpenKeychain stores and manages your keys, and those of the people you communicate with, on your Android smartphone. It also helps you find others’ keys online, and exchange keys. But its most frequent use is in using those keys to encrypt and decrypt messages.
 
 ### Integration
 
@@ -25,7 +25,7 @@ OpenKeychain integrates with
 
 ### Open Source
 
-OpenKeychain is designed to be trustworthy. It’s Free Software with no secrets; anyone can examine and validate every bit of it.
+Open Source: OpenKeychain is designed to be trustworthy. It’s Free Software with no secrets; anyone can examine and validate every bit of it (Source code available at [GitHub](https://github.com/open-keychain/open-keychain))
 
 ### Independent Security Audit
 
