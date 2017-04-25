@@ -7,6 +7,8 @@ All apps on this page are compatible with OpenKeychain and can be configured to 
 We are not actively participating in the development of each of these third-party apps.
 No security audits have been done by us and, thus, we cannot provide any security guarantees.
 
+If you are an app developer, consider using the [OpenPGP API](https://github.com/open-keychain/openpgp-api) in your application.
+
 | App                                                                 | Description                                                             | Install                                                                                                                                             | Open Source |
 |:------------------------------------------------------------------- |:----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------:|:--- |
 | [K-9 Mail](https://k9mail.github.io/)                               | Best open source email client for Android                               | [Play](https://play.google.com/store/apps/details?id=com.fsck.k9), [F-Droid](https://f-droid.org/app/com.fsck.k9)                                   | ✓ |
@@ -18,5 +20,4 @@ No security audits have been done by us and, thus, we cannot provide any securit
 | [PGPAuth](https://github.com/LittleFox94/PGPAuth)                   | Send OpenPGP-signed requests to a server                                | [Play](https://play.google.com/store/apps/details?id=org.lf_net.pgpunlocker), [F-Droid](https://f-droid.org/app/org.lf_net.pgpunlocker)             | ✓ |
 | [PGP ID](https://play.google.com/store/apps/details?id=se.rtek.rid) | Authenticate at supported online services securely                      | [Play](https://play.google.com/store/apps/details?id=se.rtek.rid)                                                                                   |   |
 
-If you are an app developer, consider using the [OpenPGP API](http://www.openkeychain.org/contribute/) in your application.
 
