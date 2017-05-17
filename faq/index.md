@@ -31,7 +31,7 @@ Otherwise, they should be fine.
     or a cloud provider, like Dropbox. This is safe because OpenKeychain
     backups are encrypted with Advanced Encryption Standard (AES) using
     securely generated Backup Codes.
- 2. On your PC, execute the following line: 
+ 2. On your PC, execute the following line:
 
     ```
     # replace 'backup_YYYY-MM-DD.pgp' with the name of your backup file
@@ -167,8 +167,13 @@ Changing the expiry date of a key in gpg prior to version 2.1.0 breaks the secre
 It's not a problem with OpenKeychain, we correctly reject the key because its self-certificates are either invalid, or have wrong flags.
 
 This issue has been reported before ([#996](https://github.com/open-keychain/open-keychain/issues/996), [#1003](https://github.com/open-keychain/open-keychain/issues/1003), [#1026](https://github.com/open-keychain/open-keychain/issues/1026)), and can be assumed to affect a large number of users.
-The bug in gpg has been fixed in gpg 2.1.0, but that version is as of now [only deployed in debian experimental](https://packages.debian.org/search?keywords=gnupg2), not even sid.
-Another [bug report](https://bugs.g10code.com/gnupg/issue1817) has been opened to backport the fix, so we hope this gets fixed soonish.
+The bug in gpg has been fixed in gpg 2.1.0, but that version is currently [only deployed in debian experimental and sid (unstable)](https://packages.debian.org/search?lang=en&keywords=gnupg2).
+Another [bug report](https://dev.gnupg.org/T1817) was opened in 2015 to backport the fix, but it looks highly unlikely.
+
+The suggested workaround is to repair your key using 2.1 if possible:
+
+> You can of course repair it using 2.1 because there --export-secret-key takes
+the public key and only adds the secret parameters.
 
 ## A wrong primary user id is shown when searching on a Keyserver
 
