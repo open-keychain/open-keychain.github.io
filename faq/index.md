@@ -97,9 +97,9 @@ Other supported tokens:
 
   * [YubiKey NEO](https://www.yubico.com/products/yubikey-hardware/yubikey-neo/) (50 EUR / 50 USD)
 
-# Are there other compatible security tokens or detailed information?
+## Are there other compatible tokens and more information?
 
-We provide a matrix of currently supported hardware and advanced information on our [wiki page](https://github.com/open-keychain/open-keychain/wiki/Security-Tokens).
+We provide a table of currently supported hardware and advanced information on our [wiki page](https://github.com/open-keychain/open-keychain/wiki/Security-Tokens).
 
 # Advanced Questions
 
