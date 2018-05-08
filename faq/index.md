@@ -38,7 +38,7 @@ Otherwise, they should be fine.
     gpg --decrypt backup_YYYY-MM-DD.pgp | gpg --import
     ```
 
- 3. Enter the full Backup Code with uppercase letters and dashes, e.g., "ABCD-EFGH-IJKL-MNOP-QRST-UVWX"
+ 3. Enter the full Backup Code including the dashes, e.g., "1234-5678-9012-3456-7890-1234-5678-9012-3456"
 
 ## What is the best way to transfer my own key to OpenKeychain?
 
