@@ -87,15 +87,7 @@ You probably don't have any stand-alone file managers installed, like [OI File M
 
 ## What security tokens are recommended for OpenKeychain?
 
-<a href="http://shop.fidesmo.com/product/fidesmo-privacy"><img style="padding: 10px;" src="{{ site.url }}/public/images/fidesmo.png" /></a>
-
-We recommend the **Fidesmo Privacy Card, which can be bought for 14 EUR** using the discount code ``OPENKEYCHAIN2016`` on the [Fidesmo Shop](http://shop.fidesmo.com/product/fidesmo-privacy).
-Don't forget to enter the discount code before checking out!
-You can save 1 EUR and support the OpenKeychain project!
-
-Other supported tokens:
-
-  * [YubiKey NEO](https://www.yubico.com/products/yubikey-hardware/yubikey-neo/) (50 EUR / 50 USD)
+We currently recommend the [YubiKey NEO](https://www.yubico.com/products/yubikey-hardware/yubikey-neo/) (50 EUR). It supports USB and NFC.
 
 ## Are there other compatible tokens and more information?
 
