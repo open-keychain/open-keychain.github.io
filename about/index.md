@@ -19,23 +19,6 @@ Modern encryption is based on digital “keys”. OpenKeychain stores and manage
 
 Open Source: OpenKeychain is designed to be trustworthy. It’s Free Software with no secrets; anyone can examine and validate every bit of it (Source code available at [GitHub](https://github.com/open-keychain/open-keychain))
 
-### Independent Security Audit
-
-The auditing company Cure53 performed an intensive security audit of OpenKeychain. The security experts summarize their final result with “[...] none of the spotted issues were considered to be of a critical severity in terms of security implications. The latter is a significant and impressive result for an app of this complexity and relevance.”
-
-### Permissions
-
-Because OpenKeychain is Free Software, anyone can validate that the permissions are indeed only required for the listed features.
-
-  * In-app purchases: Donate to the developers
-  * Identity: Pre-fill name and email addresses
-  * Contacts: Connect keys to your contacts (only offline)
-  * Photos/Media/Files: Import/export keys from SD card
-  * Camera: Scan QR Codes to add other people's keys
-  * Others: Internet permission to retrieve keys, NFC permission to use YubiKeys
-
-Starting with Android 6, permissions are requested when required in-app!
-
 ### Integration
 
 OpenKeychain primarily integrates with [K-9 Mail](https://k9mail.github.io/) to provide end-to-end encryption capabilities.
@@ -59,3 +42,19 @@ If you are an app developer, consider using the [OpenPGP API](https://github.com
 | [PGP ID](https://play.google.com/store/apps/details?id=se.rtek.rid) | Authenticate at supported online services securely                      | [Play](https://play.google.com/store/apps/details?id=se.rtek.rid)                                                                                   |   |
 
 
+### Independent Security Audit
+
+The auditing company Cure53 performed an intensive security audit of OpenKeychain. The security experts summarize their final result with “[...] none of the spotted issues were considered to be of a critical severity in terms of security implications. The latter is a significant and impressive result for an app of this complexity and relevance.”
+
+### Permissions
+
+Because OpenKeychain is Free Software, anyone can validate that the permissions are indeed only required for the listed features.
+
+  * In-app purchases: Donate to the developers
+  * Identity: Pre-fill name and email addresses
+  * Contacts: Connect keys to your contacts (only offline)
+  * Photos/Media/Files: Import/export keys from SD card
+  * Camera: Scan QR Codes to add other people's keys
+  * Others: Internet permission to retrieve keys, NFC permission to use YubiKeys
+
+Starting with Android 6, permissions are requested when required in-app!
