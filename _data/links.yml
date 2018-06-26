@@ -4,14 +4,11 @@
 - url: /about
   title: About
   
-- url: /faq
-  title: FAQ
-  
 - url: /help
   title: Help
   
-- url: /apps
-  title: Apps
+- url: /faq
+  title: FAQ
   
 - url: /contribute
   title: Contribute
