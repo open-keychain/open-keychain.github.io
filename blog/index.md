@@ -20,7 +20,7 @@ title: Blog
 
 <div>
 <script src="{{site.baseurl}}/public/js/jquery/2.0.2/jquery.min.js"></script>
-OpenKeychain for Android helps you communicate more privately and securely, compatible with the OpenPGP standard. [<a href="{{site.baseurl}}/about/">Read more</a>]
+OpenKeychain for Android helps you communicate more privately and securely, compatible with the OpenPGP standard. [<a href="{{site.baseurl}}/">Read more</a>]
 
 <p>
 <ul>

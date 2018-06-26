@@ -16,10 +16,6 @@ title: OpenKeychain
 
 <div>
 <script src="{{site.baseurl}}/public/js/jquery/2.0.2/jquery.min.js"></script>
-
-OpenKeychain helps you communicate more privately and securely. It uses encryption to ensure that your messages can be read only by the people you send them to, others can send you messages that only you can read, and these messages can be digitally signed so the people getting them are sure who sent them. OpenKeychain is based on the well established OpenPGP standard making encryption compatible across your devices and systems. For a list of compatible software for Windows, Mac OS, and other operating systems consult <a href="http://openpgp.org/software/">http://openpgp.org/software/</a>.
-
-Modern encryption is based on digital “keys”. OpenKeychain stores and manages your keys, and those of the people you communicate with, on your Android smartphone. It also helps you find others’ keys online, and exchange keys. But its most frequent use is in using those keys to encrypt and decrypt messages.
 <p>
 <ul>
 <li><b>Donate via 
@@ -27,6 +23,12 @@ Modern encryption is based on digital “keys”. OpenKeychain stores and manage
 </ul>
 </p>
 </div>
+
+## OpenKeychain
+
+OpenKeychain helps you communicate more privately and securely. It uses encryption to ensure that your messages can be read only by the people you send them to, others can send you messages that only you can read, and these messages can be digitally signed so the people getting them are sure who sent them. OpenKeychain is based on the well established OpenPGP standard making encryption compatible across your devices and systems. For a list of compatible software for Windows, Mac OS, and other operating systems consult [http://openpgp.org/software/](http://openpgp.org/software/).
+
+Modern encryption is based on digital “keys”. OpenKeychain stores and manages your keys, and those of the people you communicate with, on your Android smartphone. It also helps you find others’ keys online, and exchange keys. But its most frequent use is in using those keys to encrypt and decrypt messages.
 
 
 ### Open Source
