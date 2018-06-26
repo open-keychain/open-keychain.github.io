@@ -24,7 +24,7 @@ title: OpenKeychain
 </p>
 </div>
 
-## OpenKeychain
+# OpenKeychain
 
 OpenKeychain helps you communicate more privately and securely. It uses encryption to ensure that your messages can be read only by the people you send them to, others can send you messages that only you can read, and these messages can be digitally signed so the people getting them are sure who sent them. OpenKeychain is based on the well established OpenPGP standard making encryption compatible across your devices and systems. For a list of compatible software for Windows, Mac OS, and other operating systems consult [http://openpgp.org/software/](http://openpgp.org/software/).
 
