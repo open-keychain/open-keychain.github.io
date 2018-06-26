@@ -3,9 +3,6 @@ layout: default
 title: OpenKeychain
 ---
 
-<section>
-<div>
-
 <div style="float: right;">
 <p style="width:130px;margin-left:auto;margin-right:auto;margin-bottom:0px">
 <a href="https://twitter.com/OpenKeychain">
