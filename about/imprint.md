@@ -4,4 +4,4 @@ title: Imprint
 ---
 
 e-mail:
-dominik (at) sufficientlysecure (dot) org
+dominik (at) cotech (dot) de
