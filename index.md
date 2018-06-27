@@ -33,6 +33,10 @@ Modern encryption is based on digital “keys”. OpenKeychain stores and manage
 
 Open Source: OpenKeychain is designed to be trustworthy. It’s Free Software with no secrets; anyone can examine and validate every bit of it (Source code available at [GitHub](https://github.com/open-keychain/open-keychain))
 
+### Independent Security Audit
+
+The auditing company Cure53 performed an intensive security audit of OpenKeychain. The security experts summarize their final result with “[...] none of the spotted issues were considered to be of a critical severity in terms of security implications. The latter is a significant and impressive result for an app of this complexity and relevance.”
+
 ### Integration
 
 OpenKeychain primarily integrates with [K-9 Mail](https://k9mail.github.io/) to provide end-to-end encryption capabilities.
@@ -54,10 +58,6 @@ Besides this, several other apps work with OpenKeychain to provide encryption.
 
 We are not actively participating in the development of each of these third-party apps.
 No security audits have been done by us and, thus, we cannot provide any security guarantees.
-
-### Independent Security Audit
-
-The auditing company Cure53 performed an intensive security audit of OpenKeychain. The security experts summarize their final result with “[...] none of the spotted issues were considered to be of a critical severity in terms of security implications. The latter is a significant and impressive result for an app of this complexity and relevance.”
 
 ### Permissions
 
