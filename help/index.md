@@ -34,7 +34,7 @@ Currently, these versions are distributed via Google Play only:
 
 If you found vulnerabilities in OpenKeychain, please contact ``security@openkeychain.org`` using the [corresponding OpenPGP key](https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3298cdc6b47e1a51e969e2b1c61a2c0f7b7e0783).
 We pay 100 - 1337 EUR for responsibly disclosed vulnerabilities that have been validated by us.
-See [cure53 security audit](https://github.com/open-keychain/open-keychain/wiki/cure53-Security-Audit-2015) for valid examples (Medium, High, Critical category).
+Read [our wiki page about previous vulnerabilities](https://github.com/open-keychain/open-keychain/wiki/Vulnerabilities) for valid examples.
 
 # Export Regulations
 We are required to comply with U.S. export regulations due to the distributon of our apps on Google Play.
