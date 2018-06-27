@@ -4,24 +4,22 @@ title: OpenKeychain
 ---
 
 <div style="float: right;">
+<script src="{{site.baseurl}}/public/js/jquery/2.0.2/jquery.min.js"></script>
+
 <p style="width:130px;margin-left:auto;margin-right:auto;margin-bottom:0px">
 <a href="https://twitter.com/OpenKeychain">
-<img src="{{site.baseurl}}/public/images/twitter-512.png" width="30" height="30" style="margin-bottom:0px;" />
+  <img src="{{site.baseurl}}/public/images/twitter-512.png" width="30" height="30" style="margin-bottom:0px;" />
 </a>
-<a href="https://f-droid.org/app/org.sufficientlysecure.keychain"><img style="margin-bottom:0px" src="{{ site.url }}/public/images/fdroid.png" width="129" height="45" /></a>
-<a href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain"><img style="margin-bottom:0px" src="{{ site.url }}/public/images/google_play.png" width="129" height="45" /></a>
+<a href="https://f-droid.org/app/org.sufficientlysecure.keychain">
+  <img style="margin-bottom:0px" src="{{ site.url }}/public/images/fdroid.png" width="129" height="45" />
+</a>
+<a href="https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain">
+  <img style="margin-bottom:0px" src="{{ site.url }}/public/images/google_play.png" width="129" height="45" />
+</a>
+<b>Donations:
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=android%40schuermann.eu&amp;lc=US&amp;item_name=OpenKeychain+Donation&amp;no_note=0&amp;no_shipping=1&amp;currency_code=EUR">PayPal</a> / <a href="https://flattr.com/submit/auto?fid=4vzg0p&amp;url=https%3A%2F%2Fwww.openkeychain.org">Flattr</a> / <a href="" data-toggle="modal" data-target="#bitcoin-donation-overlay">Bitcoin</a></b>
 </p>
 <p><img src="{{ site.url }}/public/images/screen1.png" /></p>
-</div>
-
-<div>
-<script src="{{site.baseurl}}/public/js/jquery/2.0.2/jquery.min.js"></script>
-<p>
-<ul>
-<li><b>Donate via 
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=android%40schuermann.eu&amp;lc=US&amp;item_name=OpenKeychain+Donation&amp;no_note=0&amp;no_shipping=1&amp;currency_code=EUR">PayPal</a> / <a href="https://flattr.com/submit/auto?fid=4vzg0p&amp;url=https%3A%2F%2Fwww.openkeychain.org">Flattr</a> / <a href="" data-toggle="modal" data-target="#bitcoin-donation-overlay">Bitcoin</a></b></li>
-</ul>
-</p>
 </div>
 
 # OpenKeychain
