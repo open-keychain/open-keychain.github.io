@@ -14,7 +14,7 @@ We do not run infrastructure or provide cloud services.
 
 Public keys created in OpenKeychain can be uploaded to public keyservers.
 These are not run by us and thus we are not responsible for them.
-By default the [SKS keyserver pool](https://sks-keyservers.net/) is used.
+By default the [Ubuntu Keyserver](https://keyserver.ubuntu.com/) is used.
 
 ### Sensitive Permissions
 
