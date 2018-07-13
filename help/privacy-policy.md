@@ -24,3 +24,13 @@ Data aquired using these permissions is **not** shared with cloud services.
   * The CAMERA permissions is required to scan QR Codes.
   * GET_ACCOUNTS is required to provide helpful autocomplete functionality for email addresses.
   * CONTACTS is required to link keys to contacts in your address book. **This is done offline.**
+
+### Opt-In Tracking
+
+OpenKeychain uses tracking, to gather feedback on how the App is used in practice and where we can improve.
+
+This tracking is **disabled by default**, and will be enabled only if the user explicitly agrees.
+We track general usage statistics only, counting what dialogues the user goes through, and what features and settings they use.
+We explicitly gather **no personally identifiable data**, which includes no Key IDs or IPs.
+The data we gather is **never shared with any third parties**.
+Statistics are collected on a self-hosted [Matomo](https://matomo.org/) instance, and **not on a cloud provider**.
