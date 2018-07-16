@@ -16,14 +16,13 @@ Public keys created in OpenKeychain can be uploaded to public keyservers.
 These are not run by us and thus we are not responsible for them.
 By default the [Ubuntu Keyserver](https://keyserver.ubuntu.com/) is used.
 
-### Sensitive Permissions
+### Permissions
 
-Because we request the CAMERA, GET_ACCOUNTS, and CONTACTS permissions, we [are required](https://support.google.com/googleplay/android-developer/answer/113469#privacy) to provide this Privacy Policy.
+OpenKeychain requests certain permissions to provide full functionality, more precisely, it may request permission to use the device's camera and access the addressbook.
 Data aquired using these permissions is **not** shared with cloud services.
 
-  * The CAMERA permissions is required to scan QR Codes.
-  * GET_ACCOUNTS is required to provide helpful autocomplete functionality for email addresses.
-  * CONTACTS is required to link keys to contacts in your address book. **This is done offline.**
+  * The **camera** permission is required to scan QR Codes.
+  * Accessing the **contacts** is required to link keys to contacts in your address book. **This is done offline.**
 
 ### Opt-In Tracking
 
