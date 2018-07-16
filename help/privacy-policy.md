@@ -18,11 +18,13 @@ By default the [Ubuntu Keyserver](https://keyserver.ubuntu.com/) is used.
 
 ### Permissions
 
-OpenKeychain requests certain permissions to provide full functionality, more precisely, it may request permission to use the device's camera and access the addressbook.
+OpenKeychain requests certain permissions to provide full functionality. More precisely, it may request permission to use the device's camera, access the addressbook, or access files on your device.
+
 Data aquired using these permissions is **not** shared with cloud services.
 
   * The **camera** permission is required to scan QR Codes.
   * Accessing the **contacts** is required to link keys to contacts in your address book. **This is done offline.**
+  * Access to **files** on your device is requested to open existing files for encryption or decryption.
 
 ### Opt-In Tracking
 
