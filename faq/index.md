@@ -119,25 +119,6 @@ We consider having more than one valid signing subkey an advanced usecase. You c
 
 Head over to our [Wiki](https://github.com/open-keychain/open-keychain/wiki).
 
-## What is the relationship between APG and OpenKeychain?
-
-OpenKeychain has been created as a [fork of APG in March 2012](https://github.com/open-keychain/open-keychain/tree/a942c4a507a0df871c43d69076689ad1dd659e10).
-Between December 2010 and October 2013 no new [version of APG](http://www.thialfihar.org/projects/apg/) was released, which was seen as a problem by the community.
-Thus, we started OpenKeychain with the intention of picking up the development to improve the user interface and API.
-A first version 2.0 has been released in January 2013.
-After three years without updates, APG merged back security fixes from OpenKeychain and some months later rebased an entire [new version on OpenKeychain's source code](http://www.thialfihar.org/projects/apg/).
-However, this process stopped in March 2014, while we continue to release regularly new versions of OpenKeychain.
-At time of writing (2015-12-09), a number of [vulnerabilities](https://github.com/open-keychain/open-keychain/wiki/cure53-Security-Audit-2015) have not been fixed in APG since the last release at 2014-03-24.
-We strongly recommend that users migrate to OpenKeychain and developers help us to actively maintain an OpenPGP solution for Android.
-
-## How to migrate from APG to OpenKeychain?
-
-1. Start APG and long-touch one key in your list.
-2. Touch the "Select all" button and then the "Export to file" button.
-3. Inside the dialog, check "Also export secret keys?" and press OK.
-4. After a successful export, start OpenKeychain and select "Import from File" inside the "+" button.
-5. You should now be able to navigate to the APG folder on your SD card and select the file to import all keys. If you experience problems here, try [Amaze file manager](https://f-droid.org/repository/browse/?fdid=com.amaze.filemanager).
-
 # Known Issues
 
 ## A wrong primary user id is shown when searching on a Keyserver
