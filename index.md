@@ -55,6 +55,8 @@ Besides this, several other apps work with OpenKeychain to provide encryption.
 | [oandbackup](https://f-droid.org/app/dk.jens.backup)                                    | Backup apps encrypted via OpenPGP                                       | [F-Droid](https://f-droid.org/app/dk.jens.backup)                                                                                                   | [GitHub](https://github.com/jensstein/oandbackup) |
 | [PGPAuth](https://play.google.com/store/apps/details?id=org.lf_net.pgpunlocker)         | Send OpenPGP-signed requests to a server                                | [Play](https://play.google.com/store/apps/details?id=org.lf_net.pgpunlocker), [F-Droid](https://f-droid.org/app/org.lf_net.pgpunlocker)             | [GitHub](https://github.com/PGPAuth/PGPAuth_Android) |
 | [PGP ID](https://play.google.com/store/apps/details?id=se.rtek.rid)                     | Authenticate at supported online services securely                      | [Play](https://play.google.com/store/apps/details?id=se.rtek.rid)                                                                                   |   |
+| [PhotoPGP](http://photopgp.com/site/)                     | PhotoPGP is used to take photos of sensitive, private, or confidential information                      | [Play](https://play.google.com/store/apps/details?id=com.photopgp.full)                                                                                   |   |
+
 
 We are not actively participating in the development of each of these third-party apps.
 No security audits have been done by us and, thus, we cannot provide any security guarantees.
