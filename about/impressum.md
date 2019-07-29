@@ -8,9 +8,8 @@ OpenKeychain is a product of [Confidential Technologies GmbH](https://www.cotech
 ### Information in accordance with Section §5 TMG:
 
 Confidential Technologies GmbH  
-c/o Institut für Betriebssysteme  
-Mühlenpfordtstr. 23  
-38106 Braunschweig
+Wilhelmsgarten 3  
+38100 Braunschweig
 
 ### Represented by
 Dr.-Ing. Dominik Schürmann  
@@ -27,6 +26,6 @@ VAT identification number: DE319442503
 Dr.-Ing. Dominik Schürmann
 
 ### Contact Information
-Telephone: +49 531 3913154 (no OpenKeychain support)  
+Telephone: +49 531 22435119 (no OpenKeychain support)  
 Email: contact@cotech.de (no OpenKeychain support)  
-Internet address: cotech.de
+Internet address: [cotech.de](https://www.cotech.de)
