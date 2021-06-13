@@ -13,7 +13,7 @@ If you find a bug or you need some feature, please create [an issue on our Githu
 
 ## IRC Channel
 
-Our IRC Channel can be found on [Freenode](https://freenode.net): ``#openkeychain``
+Our IRC Channel can be found on [libera.chat](https://libera.chat): ``#openkeychain``
 
 ## Beta Versions
 
